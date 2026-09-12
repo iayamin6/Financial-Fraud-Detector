@@ -1,0 +1,799 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Fraud Signals",
+    "description": "Local synthetic-data research demo; risk recommendations, not bank enforcement.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/score": {
+      "post": {
+        "summary": "Score",
+        "operationId": "score_score_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/score/batch": {
+      "post": {
+        "summary": "Batch",
+        "operationId": "batch_score_batch_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/BatchRequest"
+                  },
+                  {
+                    "items": {
+                      "$ref": "#/components/schemas/Transaction"
+                    },
+                    "type": "array"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ScoreResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Batch Score Batch Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/score/batch/csv": {
+      "post": {
+        "summary": "Batch Csv",
+        "operationId": "batch_csv_score_batch_csv_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_batch_csv_score_batch_csv_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ScoreResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Batch Csv Score Batch Csv Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/explain/{transaction_id}": {
+      "post": {
+        "summary": "Explain",
+        "operationId": "explain_explain__transaction_id__post",
+        "parameters": [
+          {
+            "name": "transaction_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Transaction Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExplanationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feedback": {
+      "post": {
+        "summary": "Feedback",
+        "operationId": "feedback_feedback_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedbackResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transactions": {
+      "get": {
+        "summary": "Recent",
+        "operationId": "recent_transactions_get",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScoreResponse"
+                  },
+                  "title": "Response Recent Transactions Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/metrics": {
+      "get": {
+        "summary": "Metrics",
+        "operationId": "metrics_metrics_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetricsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/policy": {
+      "get": {
+        "summary": "Policy",
+        "operationId": "policy_policy_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PolicyResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BatchRequest": {
+        "properties": {
+          "transactions": {
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            },
+            "type": "array",
+            "maxItems": 10000,
+            "minItems": 1,
+            "title": "Transactions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "transactions"
+        ],
+        "title": "BatchRequest"
+      },
+      "Body_batch_csv_score_batch_csv_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_batch_csv_score_batch_csv_post"
+      },
+      "ExplanationResponse": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "methods": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Methods"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reasons"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "model_version",
+          "methods",
+          "reasons"
+        ],
+        "title": "ExplanationResponse"
+      },
+      "Feedback": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Transaction Id"
+          },
+          "correct_label": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ],
+            "title": "Correct Label"
+          },
+          "comment": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Comment"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "correct_label"
+        ],
+        "title": "Feedback"
+      },
+      "FeedbackResponse": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "correct_label": {
+            "type": "integer",
+            "enum": [
+              0,
+              1
+            ],
+            "title": "Correct Label"
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "false_positive",
+              "false_negative",
+              "confirmed_fraud",
+              "confirmed_legitimate"
+            ],
+            "title": "Classification"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "correct_label",
+          "classification"
+        ],
+        "title": "FeedbackResponse"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ready",
+            "title": "Status"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "model_version"
+        ],
+        "title": "HealthResponse"
+      },
+      "MetricsResponse": {
+        "properties": {
+          "scored_transactions": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Scored Transactions"
+          },
+          "average_latency_ms": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Average Latency Ms"
+          },
+          "scope": {
+            "type": "string",
+            "title": "Scope"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scored_transactions",
+          "average_latency_ms",
+          "scope",
+          "model_version"
+        ],
+        "title": "MetricsResponse"
+      },
+      "PolicyResponse": {
+        "properties": {
+          "weights": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Weights"
+          },
+          "review_threshold": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Review Threshold"
+          },
+          "block_threshold": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Block Threshold"
+          },
+          "hard_rule_floor": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Hard Rule Floor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "weights",
+          "review_threshold",
+          "block_threshold",
+          "hard_rule_floor"
+        ],
+        "title": "PolicyResponse"
+      },
+      "ScoreResponse": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "fraud_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Fraud Score"
+          },
+          "risk_tier": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "title": "Risk Tier"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "auto_pass",
+              "manual_review",
+              "auto_block"
+            ],
+            "title": "Decision"
+          },
+          "sub_scores": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Sub Scores"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reasons"
+          },
+          "layers": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Layers"
+          },
+          "fusion": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Fusion"
+          },
+          "latency_ms": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Latency Ms"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "scored_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Scored At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "fraud_score",
+          "risk_tier",
+          "decision",
+          "sub_scores",
+          "reasons",
+          "layers",
+          "fusion",
+          "latency_ms",
+          "model_version",
+          "scored_at"
+        ],
+        "title": "ScoreResponse"
+      },
+      "Transaction": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "title": "Transaction Id"
+          },
+          "sender_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Sender Id"
+          },
+          "recipient_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Recipient Id"
+          },
+          "amount": {
+            "type": "number",
+            "maximum": 1000000000000.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Amount"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "account_age_days": {
+            "type": "integer",
+            "maximum": 50000.0,
+            "minimum": 0.0,
+            "title": "Account Age Days"
+          },
+          "device_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Device Id"
+          },
+          "ip_address": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ip Address"
+          },
+          "relationship_group": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Relationship Group"
+          },
+          "country": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 3,
+                "minLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Country"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 5000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "sender_id",
+          "recipient_id",
+          "amount",
+          "timestamp",
+          "account_age_days"
+        ],
+        "title": "Transaction"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

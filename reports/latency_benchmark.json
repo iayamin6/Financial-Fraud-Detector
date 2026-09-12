@@ -1,0 +1,44 @@
+{
+  "n": 32,
+  "platform": "macOS-26.4.1-arm64-arm-64bit",
+  "model_version": "69eefd789f504dd4",
+  "scope": "Sequential local HTTP calls, warmed models, small growing demo history; excludes model startup and explanations. Not a production load test.",
+  "route_counts": {
+    "no_text": 8,
+    "rule_short_circuit": 8,
+    "baseline": 8,
+    "bert": 8
+  },
+  "latency_ms": {
+    "text": {
+      "mean": 7.571820251541794,
+      "p50": 6.203895492944866,
+      "p95": 19.601316141779535
+    },
+    "behavioral": {
+      "mean": 4.917014361126348,
+      "p50": 4.907104012090713,
+      "p95": 5.3506231372011825
+    },
+    "network": {
+      "mean": 0.06249868056329433,
+      "p50": 0.06214549648575485,
+      "p95": 0.08510845946148038
+    },
+    "fusion": {
+      "mean": 0.007018155883997679,
+      "p50": 0.006375019438564777,
+      "p95": 0.010412820847705007
+    },
+    "total_pipeline": {
+      "mean": 12.562423184135696,
+      "p50": 11.116979469079524,
+      "p95": 24.773685209220275
+    },
+    "http_round_trip": {
+      "mean": 15.855299470786122,
+      "p50": 14.425875007873401,
+      "p95": 28.587239078478888
+    }
+  }
+}

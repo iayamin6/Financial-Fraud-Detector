@@ -1,0 +1,98 @@
+{
+  "binary": {
+    "n": 80,
+    "positives": 60,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.5,
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1": 0.9230769230769231,
+    "roc_auc": 0.9875,
+    "pr_auc": 0.9960317460317462,
+    "confusion_matrix": [
+      [
+        10,
+        10
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "multiclass": {
+    "legitimate": {
+      "precision": 0.7727272727272727,
+      "recall": 0.85,
+      "f1-score": 0.8095238095238095,
+      "support": 20.0
+    },
+    "otp_scam": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1-score": 0.6666666666666666,
+      "support": 20.0
+    },
+    "phishing": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1-score": 0.4,
+      "support": 20.0
+    },
+    "impersonation": {
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "f1-score": 0.8333333333333334,
+      "support": 20.0
+    },
+    "accuracy": 0.7125,
+    "macro avg": {
+      "precision": 0.7717532467532467,
+      "recall": 0.7125,
+      "f1-score": 0.6773809523809524,
+      "support": 80.0
+    },
+    "weighted avg": {
+      "precision": 0.7717532467532467,
+      "recall": 0.7125,
+      "f1-score": 0.6773809523809524,
+      "support": 80.0
+    }
+  },
+  "multiclass_confusion_matrix": [
+    [
+      17,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      15,
+      0,
+      5
+    ],
+    [
+      5,
+      10,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      20
+    ]
+  ],
+  "class_order": [
+    "legitimate",
+    "otp_scam",
+    "phishing",
+    "impersonation"
+  ],
+  "checkpoint": "distilbert/distilbert-base-uncased",
+  "validation_selection": "best binary F1",
+  "device": "mps"
+}

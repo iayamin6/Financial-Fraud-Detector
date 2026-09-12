@@ -1,0 +1,737 @@
+text,label,fraud,split,template_id
+Payment of 983 received from Delta. Thank you.,legitimate,0,train,legitimate_0
+Payment of 6580 received from Union. Thank you.,legitimate,0,train,legitimate_0
+Payment of 4386 received from Sam. Thank you.,legitimate,0,train,legitimate_0
+Payment of 950 received from Delta. Thank you.,legitimate,0,train,legitimate_0
+Payment of 2094 received from River. Thank you.,legitimate,0,train,legitimate_0
+Payment of 5312 received from Sam. Thank you.,legitimate,0,train,legitimate_0
+Payment of 7383 received from Delta. Thank you.,legitimate,0,train,legitimate_0
+Payment of 7203 received from Delta. Thank you.,legitimate,0,train,legitimate_0
+Payment of 5180 received from River. Thank you.,legitimate,0,train,legitimate_0
+Payment of 8413 received from Union. Thank you.,legitimate,0,train,legitimate_0
+Payment of 5053 received from Union. Thank you.,legitimate,0,train,legitimate_0
+Payment of 1907 received from Sam. Thank you.,legitimate,0,train,legitimate_0
+Your balance is 7837. No action required.,legitimate,0,train,legitimate_1
+Your balance is 4083. No action required.,legitimate,0,train,legitimate_1
+Your balance is 5499. No action required.,legitimate,0,train,legitimate_1
+Your balance is 4559. No action required.,legitimate,0,train,legitimate_1
+Your balance is 1012. No action required.,legitimate,0,train,legitimate_1
+Your balance is 8890. No action required.,legitimate,0,train,legitimate_1
+Your balance is 8597. No action required.,legitimate,0,train,legitimate_1
+Your balance is 2839. No action required.,legitimate,0,train,legitimate_1
+Your balance is 1735. No action required.,legitimate,0,train,legitimate_1
+Your balance is 7035. No action required.,legitimate,0,train,legitimate_1
+Your balance is 772. No action required.,legitimate,0,train,legitimate_1
+Your balance is 4512. No action required.,legitimate,0,train,legitimate_1
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Never share your OTP or PIN. Bank staff will never ask for them.,legitimate,0,train,legitimate_2
+Your grocery order from River is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Union is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Amina is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Delta is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Union is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Delta is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Delta is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Amina is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Delta is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Delta is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Union is confirmed.,legitimate,0,train,legitimate_3
+Your grocery order from Amina is confirmed.,legitimate,0,train,legitimate_3
+Rent for this month is 2471. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 6403. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 8344. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 8068. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 7988. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 7825. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 4768. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 2843. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 5600. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 5105. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 468. Thanks.,legitimate,0,train,legitimate_4
+Rent for this month is 2530. Thanks.,legitimate,0,train,legitimate_4
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Your statement is ready in the official banking app.,legitimate,0,train,legitimate_5
+Transfer to Sam completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Amina completed successfully.,legitimate,0,train,legitimate_6
+Transfer to River completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Amina completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Amina completed successfully.,legitimate,0,train,legitimate_6
+Transfer to North completed successfully.,legitimate,0,train,legitimate_6
+Transfer to North completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Delta completed successfully.,legitimate,0,train,legitimate_6
+Transfer to North completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Union completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Delta completed successfully.,legitimate,0,train,legitimate_6
+Transfer to Amina completed successfully.,legitimate,0,train,legitimate_6
+Your one time code is 3409. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 1150. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 7738. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 6998. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 7198. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 9016. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 9386. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 5023. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 5006. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 1745. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 2463. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+Your one time code is 6868. Do not disclose it to anyone.,legitimate,0,train,legitimate_7
+"Lunch reimbursement for Union, amount 6111.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for River, amount 9600.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for River, amount 3491.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Sam, amount 3455.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Sam, amount 3726.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Delta, amount 5001.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Amina, amount 4628.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Sam, amount 7665.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Delta, amount 2708.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Delta, amount 2685.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Union, amount 7911.",legitimate,0,train,legitimate_8
+"Lunch reimbursement for Amina, amount 7395.",legitimate,0,train,legitimate_8
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+Scheduled utility payment will occur tomorrow.,legitimate,0,train,legitimate_9
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+You changed your password successfully. Contact the official branch if this was not you.,legitimate,0,train,legitimate_10
+Receipt for invoice 9897 from North.,legitimate,0,train,legitimate_11
+Receipt for invoice 4525 from Union.,legitimate,0,train,legitimate_11
+Receipt for invoice 6163 from North.,legitimate,0,train,legitimate_11
+Receipt for invoice 3018 from River.,legitimate,0,train,legitimate_11
+Receipt for invoice 1599 from Sam.,legitimate,0,train,legitimate_11
+Receipt for invoice 4239 from Union.,legitimate,0,train,legitimate_11
+Receipt for invoice 4724 from Delta.,legitimate,0,train,legitimate_11
+Receipt for invoice 743 from River.,legitimate,0,train,legitimate_11
+Receipt for invoice 2830 from Union.,legitimate,0,train,legitimate_11
+Receipt for invoice 6744 from Union.,legitimate,0,train,legitimate_11
+Receipt for invoice 4467 from Sam.,legitimate,0,train,legitimate_11
+Receipt for invoice 1694 from North.,legitimate,0,train,legitimate_11
+Please send the meeting notes to Union when convenient.,legitimate,0,validation,legitimate_12
+Please send the meeting notes to Amina when convenient.,legitimate,0,validation,legitimate_12
+Please send the meeting notes to Amina when convenient.,legitimate,0,validation,legitimate_12
+Please send the meeting notes to North when convenient.,legitimate,0,validation,legitimate_12
+Please send the meeting notes to Union when convenient.,legitimate,0,validation,legitimate_12
+Account balance updated after purchase at River.,legitimate,0,validation,legitimate_13
+Account balance updated after purchase at Delta.,legitimate,0,validation,legitimate_13
+Account balance updated after purchase at Sam.,legitimate,0,validation,legitimate_13
+Account balance updated after purchase at River.,legitimate,0,validation,legitimate_13
+Account balance updated after purchase at North.,legitimate,0,validation,legitimate_13
+Do not provide your verification code to callers claiming to be agents.,legitimate,0,validation,legitimate_14
+Do not provide your verification code to callers claiming to be agents.,legitimate,0,validation,legitimate_14
+Do not provide your verification code to callers claiming to be agents.,legitimate,0,validation,legitimate_14
+Do not provide your verification code to callers claiming to be agents.,legitimate,0,validation,legitimate_14
+Do not provide your verification code to callers claiming to be agents.,legitimate,0,validation,legitimate_14
+The card you reported lost is blocked. Visit your branch for a replacement.,legitimate,0,validation,legitimate_15
+The card you reported lost is blocked. Visit your branch for a replacement.,legitimate,0,validation,legitimate_15
+The card you reported lost is blocked. Visit your branch for a replacement.,legitimate,0,validation,legitimate_15
+The card you reported lost is blocked. Visit your branch for a replacement.,legitimate,0,validation,legitimate_15
+The card you reported lost is blocked. Visit your branch for a replacement.,legitimate,0,validation,legitimate_15
+School fees of 1498 have been paid.,legitimate,0,test,legitimate_16
+School fees of 5513 have been paid.,legitimate,0,test,legitimate_16
+School fees of 3168 have been paid.,legitimate,0,test,legitimate_16
+School fees of 4654 have been paid.,legitimate,0,test,legitimate_16
+School fees of 9635 have been paid.,legitimate,0,test,legitimate_16
+Your refund from Sam is on its way.,legitimate,0,test,legitimate_17
+Your refund from Amina is on its way.,legitimate,0,test,legitimate_17
+Your refund from North is on its way.,legitimate,0,test,legitimate_17
+Your refund from Amina is on its way.,legitimate,0,test,legitimate_17
+Your refund from Sam is on its way.,legitimate,0,test,legitimate_17
+Savings deposit confirmation: 1888 credited.,legitimate,0,test,legitimate_18
+Savings deposit confirmation: 5378 credited.,legitimate,0,test,legitimate_18
+Savings deposit confirmation: 3058 credited.,legitimate,0,test,legitimate_18
+Savings deposit confirmation: 9696 credited.,legitimate,0,test,legitimate_18
+Savings deposit confirmation: 1600 credited.,legitimate,0,test,legitimate_18
+We will meet Delta at the bank tomorrow.,legitimate,0,test,legitimate_19
+We will meet Sam at the bank tomorrow.,legitimate,0,test,legitimate_19
+We will meet Sam at the bank tomorrow.,legitimate,0,test,legitimate_19
+We will meet North at the bank tomorrow.,legitimate,0,test,legitimate_19
+We will meet Amina at the bank tomorrow.,legitimate,0,test,legitimate_19
+Send your OTP to Delta immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to North immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Union immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to River immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Delta immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Amina immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Sam immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Amina immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to River immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Delta immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to River immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Send your OTP to Amina immediately to keep your account active.,otp_scam,1,train,otp_scam_0
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Share your PIN with the support agent for verification.,otp_scam,1,train,otp_scam_1
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Tell us your verification code now or your transfer will fail.,otp_scam,1,train,otp_scam_2
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Reply with your password to unlock your wallet.,otp_scam,1,train,otp_scam_3
+Provide your OTP so we can reverse the charge of 164.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 1743.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 1896.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 7409.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 4377.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 6379.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 8485.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 6669.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 2950.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 2580.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 4683.,otp_scam,1,train,otp_scam_4
+Provide your OTP so we can reverse the charge of 3409.,otp_scam,1,train,otp_scam_4
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Give the agent your security code to receive your refund.,otp_scam,1,train,otp_scam_5
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Forward your OTP to this number for account validation.,otp_scam,1,train,otp_scam_6
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Send the PIN here to cancel the suspicious transfer.,otp_scam,1,train,otp_scam_7
+Our verification team needs your password before releasing 5411.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 4981.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 8902.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 2357.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 6461.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 9493.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 2894.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 170.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 9265.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 8946.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 1023.,otp_scam,1,train,otp_scam_8
+Our verification team needs your password before releasing 1156.,otp_scam,1,train,otp_scam_8
+Disclose the one time code to Sam to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to River to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to Sam to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to Sam to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to Sam to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to Delta to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to Delta to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to North to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to Delta to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to River to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to North to authorize your reward.,otp_scam,1,train,otp_scam_9
+Disclose the one time code to North to authorize your reward.,otp_scam,1,train,otp_scam_9
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Read the login digits aloud to our representative now.,otp_scam,1,train,otp_scam_10
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your refund is waiting; transmit the secret code from your SMS.,otp_scam,1,train,otp_scam_11
+Your wallet will expire unless you tell our agent the PIN.,otp_scam,1,validation,otp_scam_12
+Your wallet will expire unless you tell our agent the PIN.,otp_scam,1,validation,otp_scam_12
+Your wallet will expire unless you tell our agent the PIN.,otp_scam,1,validation,otp_scam_12
+Your wallet will expire unless you tell our agent the PIN.,otp_scam,1,validation,otp_scam_12
+Your wallet will expire unless you tell our agent the PIN.,otp_scam,1,validation,otp_scam_12
+"To claim 5082, reply with your verification code.",otp_scam,1,validation,otp_scam_13
+"To claim 9197, reply with your verification code.",otp_scam,1,validation,otp_scam_13
+"To claim 9529, reply with your verification code.",otp_scam,1,validation,otp_scam_13
+"To claim 6398, reply with your verification code.",otp_scam,1,validation,otp_scam_13
+"To claim 6256, reply with your verification code.",otp_scam,1,validation,otp_scam_13
+Give your password to the service desk immediately.,otp_scam,1,validation,otp_scam_14
+Give your password to the service desk immediately.,otp_scam,1,validation,otp_scam_14
+Give your password to the service desk immediately.,otp_scam,1,validation,otp_scam_14
+Give your password to the service desk immediately.,otp_scam,1,validation,otp_scam_14
+Give your password to the service desk immediately.,otp_scam,1,validation,otp_scam_14
+Send your OTP to recover the blocked funds.,otp_scam,1,validation,otp_scam_15
+Send your OTP to recover the blocked funds.,otp_scam,1,validation,otp_scam_15
+Send your OTP to recover the blocked funds.,otp_scam,1,validation,otp_scam_15
+Send your OTP to recover the blocked funds.,otp_scam,1,validation,otp_scam_15
+Send your OTP to recover the blocked funds.,otp_scam,1,validation,otp_scam_15
+The caller needs the private login token to finish the refund.,otp_scam,1,test,otp_scam_16
+The caller needs the private login token to finish the refund.,otp_scam,1,test,otp_scam_16
+The caller needs the private login token to finish the refund.,otp_scam,1,test,otp_scam_16
+The caller needs the private login token to finish the refund.,otp_scam,1,test,otp_scam_16
+The caller needs the private login token to finish the refund.,otp_scam,1,test,otp_scam_16
+Unlock your payment by forwarding the authentication digits.,otp_scam,1,test,otp_scam_17
+Unlock your payment by forwarding the authentication digits.,otp_scam,1,test,otp_scam_17
+Unlock your payment by forwarding the authentication digits.,otp_scam,1,test,otp_scam_17
+Unlock your payment by forwarding the authentication digits.,otp_scam,1,test,otp_scam_17
+Unlock your payment by forwarding the authentication digits.,otp_scam,1,test,otp_scam_17
+A support officer is requesting your confidential passcode.,otp_scam,1,test,otp_scam_18
+A support officer is requesting your confidential passcode.,otp_scam,1,test,otp_scam_18
+A support officer is requesting your confidential passcode.,otp_scam,1,test,otp_scam_18
+A support officer is requesting your confidential passcode.,otp_scam,1,test,otp_scam_18
+A support officer is requesting your confidential passcode.,otp_scam,1,test,otp_scam_18
+Let our agent know the six secret digits sent to your phone.,otp_scam,1,test,otp_scam_19
+Let our agent know the six secret digits sent to your phone.,otp_scam,1,test,otp_scam_19
+Let our agent know the six secret digits sent to your phone.,otp_scam,1,test,otp_scam_19
+Let our agent know the six secret digits sent to your phone.,otp_scam,1,test,otp_scam_19
+Let our agent know the six secret digits sent to your phone.,otp_scam,1,test,otp_scam_19
+Your account is blocked. Click this link to verify identity: https://Union-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Sam-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Delta-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Amina-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Union-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Amina-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://River-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://River-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Sam-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Union-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Union-secure.example/login,phishing,1,train,phishing_0
+Your account is blocked. Click this link to verify identity: https://Delta-secure.example/login,phishing,1,train,phishing_0
+Wallet suspended. Verify now at https://restore-North.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Sam.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Delta.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Union.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Union.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Sam.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Delta.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Sam.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-River.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-Sam.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-North.example.,phishing,1,train,phishing_1
+Wallet suspended. Verify now at https://restore-River.example.,phishing,1,train,phishing_1
+Last warning: update your banking login at https://North-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Delta-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://River-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Union-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Delta-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Amina-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Union-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Union-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Amina-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Sam-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://Delta-check.example.,phishing,1,train,phishing_2
+Last warning: update your banking login at https://River-check.example.,phishing,1,train,phishing_2
+Claim your prize of 3970; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 537; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 6876; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 7802; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 527; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 6690; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 337; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 1451; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 6270; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 6839; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 8648; pay the processing fee first.,phishing,1,train,phishing_3
+Claim your prize of 2534; pay the processing fee first.,phishing,1,train,phishing_3
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+Account frozen. Click the restore link and enter your password.,phishing,1,train,phishing_4
+You won a lottery reward! Pay a deposit of 2524 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 6724 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 9685 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 1290 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 8476 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 8216 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 4520 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 4616 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 1225 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 7004 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 5444 to collect.,phishing,1,train,phishing_5
+You won a lottery reward! Pay a deposit of 5527 to collect.,phishing,1,train,phishing_5
+Urgent: confirm your card details at https://Sam-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://River-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://Delta-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://Amina-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://Amina-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://Delta-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://Sam-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://North-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://River-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://North-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://River-verify.example.,phishing,1,train,phishing_6
+Urgent: confirm your card details at https://Sam-verify.example.,phishing,1,train,phishing_6
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+Unclaimed grant available. Deposit a fee to release your grant.,phishing,1,train,phishing_7
+A security issue requires signing in through https://North-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://Delta-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://North-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://Sam-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://River-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://North-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://Union-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://Union-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://River-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://River-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://Amina-help.example.,phishing,1,train,phishing_8
+A security issue requires signing in through https://Amina-help.example.,phishing,1,train,phishing_8
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Act now to avoid suspension. Use this wallet validation portal.,phishing,1,train,phishing_9
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Reauthenticate your banking credentials using our attached web form.,phishing,1,train,phishing_10
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Access to funds will end unless you visit the recovery portal.,phishing,1,train,phishing_11
+Congratulations on a prize of 8236. Pay the delivery fee now.,phishing,1,validation,phishing_12
+Congratulations on a prize of 868. Pay the delivery fee now.,phishing,1,validation,phishing_12
+Congratulations on a prize of 5696. Pay the delivery fee now.,phishing,1,validation,phishing_12
+Congratulations on a prize of 4926. Pay the delivery fee now.,phishing,1,validation,phishing_12
+Congratulations on a prize of 7334. Pay the delivery fee now.,phishing,1,validation,phishing_12
+Your account is suspended; click our link to restore it.,phishing,1,validation,phishing_13
+Your account is suspended; click our link to restore it.,phishing,1,validation,phishing_13
+Your account is suspended; click our link to restore it.,phishing,1,validation,phishing_13
+Your account is suspended; click our link to restore it.,phishing,1,validation,phishing_13
+Your account is suspended; click our link to restore it.,phishing,1,validation,phishing_13
+Wallet blocked. Verify with this external login page immediately.,phishing,1,validation,phishing_14
+Wallet blocked. Verify with this external login page immediately.,phishing,1,validation,phishing_14
+Wallet blocked. Verify with this external login page immediately.,phishing,1,validation,phishing_14
+Wallet blocked. Verify with this external login page immediately.,phishing,1,validation,phishing_14
+Wallet blocked. Verify with this external login page immediately.,phishing,1,validation,phishing_14
+Reward notification: pay an activation fee before payout.,phishing,1,validation,phishing_15
+Reward notification: pay an activation fee before payout.,phishing,1,validation,phishing_15
+Reward notification: pay an activation fee before payout.,phishing,1,validation,phishing_15
+Reward notification: pay an activation fee before payout.,phishing,1,validation,phishing_15
+Reward notification: pay an activation fee before payout.,phishing,1,validation,phishing_15
+Secure your deposits by entering credentials on this replacement website.,phishing,1,test,phishing_16
+Secure your deposits by entering credentials on this replacement website.,phishing,1,test,phishing_16
+Secure your deposits by entering credentials on this replacement website.,phishing,1,test,phishing_16
+Secure your deposits by entering credentials on this replacement website.,phishing,1,test,phishing_16
+Secure your deposits by entering credentials on this replacement website.,phishing,1,test,phishing_16
+A pending bonus requires an upfront activation payment.,phishing,1,test,phishing_17
+A pending bonus requires an upfront activation payment.,phishing,1,test,phishing_17
+A pending bonus requires an upfront activation payment.,phishing,1,test,phishing_17
+A pending bonus requires an upfront activation payment.,phishing,1,test,phishing_17
+A pending bonus requires an upfront activation payment.,phishing,1,test,phishing_17
+Follow this alternate sign in page to prevent closure of your savings.,phishing,1,test,phishing_18
+Follow this alternate sign in page to prevent closure of your savings.,phishing,1,test,phishing_18
+Follow this alternate sign in page to prevent closure of your savings.,phishing,1,test,phishing_18
+Follow this alternate sign in page to prevent closure of your savings.,phishing,1,test,phishing_18
+Follow this alternate sign in page to prevent closure of your savings.,phishing,1,test,phishing_18
+Receive the inheritance after settling the administrative charge.,phishing,1,test,phishing_19
+Receive the inheritance after settling the administrative charge.,phishing,1,test,phishing_19
+Receive the inheritance after settling the administrative charge.,phishing,1,test,phishing_19
+Receive the inheritance after settling the administrative charge.,phishing,1,test,phishing_19
+Receive the inheritance after settling the administrative charge.,phishing,1,test,phishing_19
+I am your bank agent Amina. Transfer 3132 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Sam. Transfer 2516 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent River. Transfer 9413 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Amina. Transfer 6357 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Amina. Transfer 2006 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Union. Transfer 2024 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent North. Transfer 9956 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Union. Transfer 7260 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent River. Transfer 237 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Amina. Transfer 2761 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent Sam. Transfer 8421 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+I am your bank agent North. Transfer 8555 to my personal wallet to restore access.,impersonation,1,train,impersonation_0
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+This is the bank manager. Move your savings to our safe account immediately.,impersonation,1,train,impersonation_1
+"Hello, your CEO Sam needs a confidential transfer of 4365 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO North needs a confidential transfer of 3119 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Sam needs a confidential transfer of 1289 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Union needs a confidential transfer of 3903 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Union needs a confidential transfer of 5870 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO North needs a confidential transfer of 8494 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO River needs a confidential transfer of 5218 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Union needs a confidential transfer of 317 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Sam needs a confidential transfer of 9982 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO North needs a confidential transfer of 6326 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Amina needs a confidential transfer of 3975 now.",impersonation,1,train,impersonation_2
+"Hello, your CEO Union needs a confidential transfer of 184 now.",impersonation,1,train,impersonation_2
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Police fraud team here. Send funds to our secure holding account.,impersonation,1,train,impersonation_3
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+Your mobile service agent requires an emergency wallet transfer.,impersonation,1,train,impersonation_4
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+I work for the central bank. Transfer the balance for a security audit.,impersonation,1,train,impersonation_5
+This is Sam from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is Union from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is Delta from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is River from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is North from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is Delta from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is Sam from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is Delta from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is River from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is Union from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is River from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+This is River from support. Pay my personal account to unfreeze your funds.,impersonation,1,train,impersonation_6
+"Family emergency, this is my new number. Send 9322 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 7650 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 6604 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 180 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 7424 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 3995 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 3880 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 9087 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 1108 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 2413 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 4493 without calling.",impersonation,1,train,impersonation_7
+"Family emergency, this is my new number. Send 9522 without calling.",impersonation,1,train,impersonation_7
+Tax officer Delta demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer River demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Union demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Sam demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Delta demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Amina demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Sam demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Union demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Sam demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Amina demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer North demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Tax officer Union demands immediate payment to this wallet or arrest follows.,impersonation,1,train,impersonation_8
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Bank security requires you to shift money to an account we control.,impersonation,1,train,impersonation_9
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+Your director requests an off the record wire to a new beneficiary.,impersonation,1,train,impersonation_10
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+A regulator instructs you to relocate deposits to a temporary account.,impersonation,1,train,impersonation_11
+I am the bank agent. Send 9841 to me urgently for verification.,impersonation,1,validation,impersonation_12
+I am the bank agent. Send 2234 to me urgently for verification.,impersonation,1,validation,impersonation_12
+I am the bank agent. Send 6236 to me urgently for verification.,impersonation,1,validation,impersonation_12
+I am the bank agent. Send 347 to me urgently for verification.,impersonation,1,validation,impersonation_12
+I am the bank agent. Send 8560 to me urgently for verification.,impersonation,1,validation,impersonation_12
+Company president here. Make a secret payment before the meeting.,impersonation,1,validation,impersonation_13
+Company president here. Make a secret payment before the meeting.,impersonation,1,validation,impersonation_13
+Company president here. Make a secret payment before the meeting.,impersonation,1,validation,impersonation_13
+Company president here. Make a secret payment before the meeting.,impersonation,1,validation,impersonation_13
+Company president here. Make a secret payment before the meeting.,impersonation,1,validation,impersonation_13
+Fraud investigator calling: transfer your savings for safekeeping.,impersonation,1,validation,impersonation_14
+Fraud investigator calling: transfer your savings for safekeeping.,impersonation,1,validation,impersonation_14
+Fraud investigator calling: transfer your savings for safekeeping.,impersonation,1,validation,impersonation_14
+Fraud investigator calling: transfer your savings for safekeeping.,impersonation,1,validation,impersonation_14
+Fraud investigator calling: transfer your savings for safekeeping.,impersonation,1,validation,impersonation_14
+This is your cousin on a new phone. Pay me and do not call back.,impersonation,1,validation,impersonation_15
+This is your cousin on a new phone. Pay me and do not call back.,impersonation,1,validation,impersonation_15
+This is your cousin on a new phone. Pay me and do not call back.,impersonation,1,validation,impersonation_15
+This is your cousin on a new phone. Pay me and do not call back.,impersonation,1,validation,impersonation_15
+This is your cousin on a new phone. Pay me and do not call back.,impersonation,1,validation,impersonation_15
+An official auditor asks that funds be moved to their private balance.,impersonation,1,test,impersonation_16
+An official auditor asks that funds be moved to their private balance.,impersonation,1,test,impersonation_16
+An official auditor asks that funds be moved to their private balance.,impersonation,1,test,impersonation_16
+An official auditor asks that funds be moved to their private balance.,impersonation,1,test,impersonation_16
+An official auditor asks that funds be moved to their private balance.,impersonation,1,test,impersonation_16
+Your supervisor needs a discreet remittance outside normal approvals.,impersonation,1,test,impersonation_17
+Your supervisor needs a discreet remittance outside normal approvals.,impersonation,1,test,impersonation_17
+Your supervisor needs a discreet remittance outside normal approvals.,impersonation,1,test,impersonation_17
+Your supervisor needs a discreet remittance outside normal approvals.,impersonation,1,test,impersonation_17
+Your supervisor needs a discreet remittance outside normal approvals.,impersonation,1,test,impersonation_17
+A relative using an unfamiliar number requests money and refuses a call.,impersonation,1,test,impersonation_18
+A relative using an unfamiliar number requests money and refuses a call.,impersonation,1,test,impersonation_18
+A relative using an unfamiliar number requests money and refuses a call.,impersonation,1,test,impersonation_18
+A relative using an unfamiliar number requests money and refuses a call.,impersonation,1,test,impersonation_18
+A relative using an unfamiliar number requests money and refuses a call.,impersonation,1,test,impersonation_18
+The supposed bank employee wants your deposit placed in their own wallet.,impersonation,1,test,impersonation_19
+The supposed bank employee wants your deposit placed in their own wallet.,impersonation,1,test,impersonation_19
+The supposed bank employee wants your deposit placed in their own wallet.,impersonation,1,test,impersonation_19
+The supposed bank employee wants your deposit placed in their own wallet.,impersonation,1,test,impersonation_19
+The supposed bank employee wants your deposit placed in their own wallet.,impersonation,1,test,impersonation_19

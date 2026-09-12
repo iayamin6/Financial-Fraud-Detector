@@ -1,0 +1,2941 @@
+[
+  {
+    "transaction_id": "demo-seed-00",
+    "fraud_score": 0.142083295829,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.292095160484314,
+      "network": 0.075,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.292095160484314,
+        "xgboost": 0.36511895060539246,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.61512051684126,
+          "amount_ratio": 0.5,
+          "hour_sin": 0.36243803828370136,
+          "hour_cos": -0.9320078692827987,
+          "velocity_count_ratio": 1.0,
+          "velocity_sum_ratio": 2.0,
+          "new_payee": 1.0,
+          "round_amount": 1.0,
+          "age_size_ratio": 0.1539129524993825,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.075,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 1.0,
+          "sender_fan_out": 1.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.075
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.142083295829,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.10223330616950989,
+        "network": 0.015,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.142083295829,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 16.82816701941192,
+      "behavioral": 8.603250025771558,
+      "network": 0.12966699432581663,
+      "fusion": 0.009249954018741846,
+      "total_pipeline": 25.575000036042184
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.763116Z"
+  },
+  {
+    "transaction_id": "demo-seed-01",
+    "fraud_score": 0.14382600928,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.29707434177398684,
+      "network": 0.075,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.29707434177398684,
+        "xgboost": 0.3713429272174835,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.68213122712422,
+          "amount_ratio": 0.535,
+          "hour_sin": 0.35836794954530066,
+          "hour_cos": -0.9335804264972016,
+          "velocity_count_ratio": 1.0,
+          "velocity_sum_ratio": 2.14,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.1638491591585122,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.075,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 1.0,
+          "sender_fan_out": 1.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.075
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.14382600928,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.1039760196208954,
+        "network": 0.015,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.14382600928,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.850834004580975,
+      "behavioral": 4.535749962087721,
+      "network": 0.025957997422665358,
+      "fusion": 0.010124989785254002,
+      "total_pipeline": 11.426332988776267
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.774811Z"
+  },
+  {
+    "transaction_id": "demo-seed-02",
+    "fraud_score": 0.13949813152,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.28470897674560547,
+      "network": 0.075,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.28470897674560547,
+        "xgboost": 0.35588622093200684,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.74493212836325,
+          "amount_ratio": 0.57,
+          "hour_sin": 0.35429103799771566,
+          "hour_cos": -0.9351352096860118,
+          "velocity_count_ratio": 1.0,
+          "velocity_sum_ratio": 2.28,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.17368760815880008,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.075,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 1.0,
+          "sender_fan_out": 1.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.075
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.13949813152,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09964814186096191,
+        "network": 0.015,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.13949813152,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.585875002201647,
+      "behavioral": 4.615458019543439,
+      "network": 0.03366696182638407,
+      "fusion": 0.007291033398360014,
+      "total_pipeline": 11.245916946791112
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.786197Z"
+  },
+  {
+    "transaction_id": "demo-seed-03",
+    "fraud_score": 0.163396132237,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.31013183593750004,
+      "network": 0.15,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.31013183593750004,
+        "xgboost": 0.387664794921875,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.804021044733257,
+          "amount_ratio": 0.605,
+          "hour_sin": 0.35020738125946793,
+          "hour_cos": -0.9366721892483975,
+          "velocity_count_ratio": 1.0,
+          "velocity_sum_ratio": 2.42,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.18343020435761864,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.15,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 2.0,
+          "sender_fan_out": 1.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.15
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.163396132237,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.108546142578125,
+        "network": 0.03,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.163396132237,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.599083018954843,
+      "behavioral": 4.617667000275105,
+      "network": 0.03908301005139947,
+      "fusion": 0.007375027053058147,
+      "total_pipeline": 11.2673330004327
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.797616Z"
+  },
+  {
+    "transaction_id": "demo-seed-04",
+    "fraud_score": 0.110769752509,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.1597707509994507,
+      "network": 0.15,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.1597707509994507,
+        "xgboost": 0.19971343874931335,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.859812404361672,
+          "amount_ratio": 1.28,
+          "hour_sin": 0.34611705707749285,
+          "hour_cos": -0.9381913359224842,
+          "velocity_count_ratio": 2.0,
+          "velocity_sum_ratio": 9.12,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.19307879747345058,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.15,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 2.0,
+          "sender_fan_out": 2.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.15
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.110769752509,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.05591976284980774,
+        "network": 0.03,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.110769752509,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.286624993663281,
+      "behavioral": 4.500667040701956,
+      "network": 0.036917044781148434,
+      "fusion": 0.00662502134218812,
+      "total_pipeline": 10.834290995262563
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.808633Z"
+  },
+  {
+    "transaction_id": "demo-seed-05",
+    "fraud_score": 0.110769752509,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.1597707509994507,
+      "network": 0.15,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.1597707509994507,
+        "xgboost": 0.19971343874931335,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.912654885736052,
+          "amount_ratio": 1.2616822429906542,
+          "hour_sin": 0.3420201433256689,
+          "hour_cos": -0.9396926207859083,
+          "velocity_count_ratio": 2.0,
+          "velocity_sum_ratio": 9.046728971962617,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.20263518419366866,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.15,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 2.0,
+          "sender_fan_out": 2.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.15
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.110769752509,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.05591976284980774,
+        "network": 0.03,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.110769752509,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.398333003744483,
+      "behavioral": 4.438749980181456,
+      "network": 0.029125018045306206,
+      "fusion": 0.006416987162083387,
+      "total_pipeline": 10.875958018004894
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.819673Z"
+  },
+  {
+    "transaction_id": "demo-seed-06",
+    "fraud_score": 0.120414385445,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.14446970224380493,
+      "network": 0.22499999999999998,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.14446970224380493,
+        "xgboost": 0.18058712780475616,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 4.962844630259907,
+          "amount_ratio": 1.2456140350877194,
+          "hour_sin": 0.3379167180033274,
+          "hour_cos": -0.9411760152563705,
+          "velocity_count_ratio": 2.0,
+          "velocity_sum_ratio": 8.982456140350877,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.2121011101825516,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.22499999999999998,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 3.0,
+          "sender_fan_out": 2.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.22499999999999998
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.120414385445,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.05056439578533172,
+        "network": 0.045,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.120414385445,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.33841595845297,
+      "behavioral": 4.526750009972602,
+      "network": 0.04029099363833666,
+      "fusion": 0.009166949894279242,
+      "total_pipeline": 10.919917025603354
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.830722Z"
+  },
+  {
+    "transaction_id": "demo-seed-07",
+    "fraud_score": 0.119774296529,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.14264087677001955,
+      "network": 0.22499999999999998,
+      "rules": 0.0
+    },
+    "reasons": [
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.14264087677001955,
+        "xgboost": 0.17830109596252441,
+        "isolation": 0.0,
+        "features": {
+          "log_amount": 5.0106352940962555,
+          "amount_ratio": 1.2314049586776858,
+          "hour_sin": 0.3338068592337712,
+          "hour_cos": -0.9426414910921783,
+          "velocity_count_ratio": 2.0,
+          "velocity_sum_ratio": 8.925619834710744,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.22147827199514855,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.22499999999999998,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 3.0,
+          "sender_fan_out": 2.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.22499999999999998
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.119774296529,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.049924306869506836,
+        "network": 0.045,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.119774296529,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.822708004619926,
+      "behavioral": 4.627167014405131,
+      "network": 0.03862503217533231,
+      "fusion": 0.007958034984767437,
+      "total_pipeline": 11.500999971758574
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.842388Z"
+  },
+  {
+    "transaction_id": "demo-seed-08",
+    "fraud_score": 0.11056067278,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.11631623748659614,
+      "network": 0.22499999999999998,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 3.0\u00d7 historical rate",
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.11631623748659614,
+        "xgboost": 0.09572254121303558,
+        "isolation": 0.1986910225808383,
+        "features": {
+          "log_amount": 5.056245805348308,
+          "amount_ratio": 1.368421052631579,
+          "hour_sin": 0.32969064526278735,
+          "hour_cos": -0.9440890203927842,
+          "velocity_count_ratio": 3.0,
+          "velocity_sum_ratio": 13.473684210526315,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.2307683189022412,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 3.0\u00d7 historical rate",
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.22499999999999998,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 3.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.22499999999999998
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.11056067278,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.04071068312030865,
+        "network": 0.045,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.11056067278,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.444166996516287,
+      "behavioral": 4.402666003443301,
+      "network": 0.031999952625483274,
+      "fusion": 0.005582987796515226,
+      "total_pipeline": 10.887875047046691
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.853426Z"
+  },
+  {
+    "transaction_id": "demo-seed-09",
+    "fraud_score": 0.142168306309,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.16376661899855305,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 3.0\u00d7 historical rate",
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.16376661899855305,
+        "xgboost": 0.15518377721309662,
+        "isolation": 0.19809798614037863,
+        "features": {
+          "log_amount": 5.099866427824199,
+          "amount_ratio": 1.3471074380165289,
+          "hour_sin": 0.32556815445715703,
+          "hour_cos": -0.9455185755993167,
+          "velocity_count_ratio": 3.0,
+          "velocity_sum_ratio": 13.388429752066116,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.2399728546313129,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 3.0\u00d7 historical rate",
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.142168306309,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.057318316649493564,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.142168306309,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.251416984014213,
+      "behavioral": 4.6048329677432775,
+      "network": 0.03995897714048624,
+      "fusion": 0.0067909713834524155,
+      "total_pipeline": 10.907249990850687
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.864467Z"
+  },
+  {
+    "transaction_id": "demo-seed-10",
+    "fraud_score": 0.142047781653,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.16342226283915462,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 3.0\u00d7 historical rate",
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.16342226283915462,
+        "xgboost": 0.1530982404947281,
+        "isolation": 0.20471835221686074,
+        "features": {
+          "log_amount": 5.14166355650266,
+          "amount_ratio": 1.328125,
+          "hour_sin": 0.32143946530316175,
+          "hour_cos": -0.9469301294951056,
+          "velocity_count_ratio": 3.0,
+          "velocity_sum_ratio": 13.3125,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.24909343902812192,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 3.0\u00d7 historical rate",
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.142047781653,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.05719779199370411,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.142047781653,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.178790994454175,
+      "behavioral": 4.818207991775125,
+      "network": 0.0321660190820694,
+      "fusion": 0.005458015948534012,
+      "total_pipeline": 11.037707969080657
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.875681Z"
+  },
+  {
+    "transaction_id": "demo-seed-11",
+    "fraud_score": 0.142047781653,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.16342226283915462,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 3.0\u00d7 historical rate",
+      "New payee"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.16342226283915462,
+        "xgboost": 0.1530982404947281,
+        "isolation": 0.20471835221686074,
+        "features": {
+          "log_amount": 5.181783550292085,
+          "amount_ratio": 1.3111111111111111,
+          "hour_sin": 0.31730465640509214,
+          "hour_cos": -0.9483236552061993,
+          "velocity_count_ratio": 3.0,
+          "velocity_sum_ratio": 13.244444444444444,
+          "new_payee": 1.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.25813158964318406,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 3.0\u00d7 historical rate",
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.142047781653,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.05719779199370411,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.142047781653,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.165792001411319,
+      "behavioral": 4.353417025413364,
+      "network": 0.03225001273676753,
+      "fusion": 0.005124951712787151,
+      "total_pipeline": 10.55966696003452
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.886419Z"
+  },
+  {
+    "transaction_id": "demo-seed-12",
+    "fraud_score": 0.191575039354,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.3049287134120986,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 4.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.3049287134120986,
+        "xgboost": 0.21280309557914734,
+        "isolation": 0.6734311847439034,
+        "features": {
+          "log_amount": 5.220355825078324,
+          "amount_ratio": 1.4375,
+          "hour_sin": 0.3131638064837498,
+          "hour_cos": -0.9496991262018769,
+          "velocity_count_ratio": 4.0,
+          "velocity_sum_ratio": 17.75,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.26708878324720087,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 4.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.191575039354,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.1067250496942345,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.191575039354,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.215583998709917,
+      "behavioral": 4.5707920216955245,
+      "network": 0.03837497206404805,
+      "fusion": 0.005875015631318092,
+      "total_pipeline": 10.834290995262563
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.897374Z"
+  },
+  {
+    "transaction_id": "demo-seed-13",
+    "fraud_score": 0.191575039354,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.3049287134120986,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 4.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.3049287134120986,
+        "xgboost": 0.21280309557914734,
+        "isolation": 0.6734311847439034,
+        "features": {
+          "log_amount": 5.2574953720277815,
+          "amount_ratio": 1.4148148148148147,
+          "hour_sin": 0.3090169943749475,
+          "hour_cos": -0.9510565162951535,
+          "velocity_count_ratio": 4.0,
+          "velocity_sum_ratio": 17.659259259259258,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.27596645727921826,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 4.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.191575039354,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.1067250496942345,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.191575039354,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.228416983503848,
+      "behavioral": 4.445833968929946,
+      "network": 0.048290996346622705,
+      "fusion": 0.006415997631847858,
+      "total_pipeline": 10.73237496893853
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.908256Z"
+  },
+  {
+    "transaction_id": "demo-seed-14",
+    "fraud_score": 0.193571531923,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.3106329778975176,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 4.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.3106329778975176,
+        "xgboost": 0.22409674525260925,
+        "isolation": 0.6567779084771509,
+        "features": {
+          "log_amount": 5.293304824724492,
+          "amount_ratio": 1.3943661971830985,
+          "hour_sin": 0.30486429902801077,
+          "hour_cos": -0.9523957996432784,
+          "velocity_count_ratio": 4.0,
+          "velocity_sum_ratio": 17.577464788732396,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.2847660112310671,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 4.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.193571531923,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.10872154226413115,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.193571531923,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.316290993709117,
+      "behavioral": 4.33879200136289,
+      "network": 0.03308302257210016,
+      "fusion": 0.004875008016824722,
+      "total_pipeline": 10.695833014324307
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.919095Z"
+  },
+  {
+    "transaction_id": "demo-seed-15",
+    "fraud_score": 0.194526022906,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.31336009498976175,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 4.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.31336009498976175,
+        "xgboost": 0.22409674525260925,
+        "isolation": 0.6704134939383717,
+        "features": {
+          "log_amount": 5.327876168789581,
+          "amount_ratio": 1.3758389261744965,
+          "hour_sin": 0.30070579950427334,
+          "hour_cos": -0.9537169507482268,
+          "velocity_count_ratio": 4.0,
+          "velocity_sum_ratio": 17.503355704697988,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.2934888079714207,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 4.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.194526022906,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.1096760332464166,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.194526022906,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.13958400208503,
+      "behavioral": 4.522375005763024,
+      "network": 0.036999990697950125,
+      "fusion": 0.005416979547590017,
+      "total_pipeline": 10.707375011406839
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.929922Z"
+  },
+  {
+    "transaction_id": "demo-seed-16",
+    "fraud_score": 0.181207361118,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.27530677559675326,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 5.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.27530677559675326,
+        "xgboost": 0.16555224359035492,
+        "isolation": 0.7143249036223466,
+        "features": {
+          "log_amount": 5.3612921657094255,
+          "amount_ratio": 1.4929577464788732,
+          "hour_sin": 0.296541574975571,
+          "hour_cos": -0.9550199444571866,
+          "velocity_count_ratio": 5.0,
+          "velocity_sum_ratio": 21.971830985915492,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.30213617501260304,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 5.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.181207361118,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09635737145886364,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.181207361118,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.20254100067541,
+      "behavioral": 4.3724580318666995,
+      "network": 0.03404199378564954,
+      "fusion": 0.004750036168843508,
+      "total_pipeline": 10.616583982482553
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.940677Z"
+  },
+  {
+    "transaction_id": "demo-seed-17",
+    "fraud_score": 0.179602756432,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.2707221907780738,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 5.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.2707221907780738,
+        "xgboost": 0.16555224359035492,
+        "isolation": 0.6914019795289491,
+        "features": {
+          "log_amount": 5.393627546352362,
+          "amount_ratio": 1.4697986577181208,
+          "hour_sin": 0.2923717047227366,
+          "hour_cos": -0.9563047559630355,
+          "velocity_count_ratio": 5.0,
+          "velocity_sum_ratio": 21.879194630872483,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.31070940572309125,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 5.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.179602756432,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09475276677232583,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.179602756432,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.315167003776878,
+      "behavioral": 4.3670000159181654,
+      "network": 0.033374992199242115,
+      "fusion": 0.005166977643966675,
+      "total_pipeline": 10.72379102697596
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.951516Z"
+  },
+  {
+    "transaction_id": "demo-seed-18",
+    "fraud_score": 0.183992441485,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.2832641480719787,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 5.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.2832641480719787,
+        "xgboost": 0.1757468581199646,
+        "isolation": 0.713333307880035,
+        "features": {
+          "log_amount": 5.424950017481403,
+          "amount_ratio": 1.4487179487179487,
+          "hour_sin": 0.28819626813408944,
+          "hour_cos": -0.9575713608048144,
+          "velocity_count_ratio": 5.0,
+          "velocity_sum_ratio": 21.794871794871796,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.3192097604884837,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 5.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.183992441485,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09914245182519253,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.183992441485,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.035875005181879,
+      "behavioral": 4.534624982625246,
+      "network": 0.045042019337415695,
+      "fusion": 0.007084046956151724,
+      "total_pipeline": 10.626333998516202
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.962261Z"
+  },
+  {
+    "transaction_id": "demo-seed-19",
+    "fraud_score": 0.183627946561,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.282222734003987,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 5.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.282222734003987,
+        "xgboost": 0.1757468581199646,
+        "isolation": 0.7081262375400768,
+        "features": {
+          "log_amount": 5.455321115357702,
+          "amount_ratio": 1.4294478527607362,
+          "hour_sin": 0.2840153447039226,
+          "hour_cos": -0.958819734868193,
+          "velocity_count_ratio": 5.0,
+          "velocity_sum_ratio": 21.717791411042946,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.32763846782353917,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 5.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.183627946561,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09877795690139544,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.183627946561,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.1705829575657845,
+      "behavioral": 4.322915978264064,
+      "network": 0.03445800393819809,
+      "fusion": 0.004499976057559252,
+      "total_pipeline": 10.535250010434538
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.972961Z"
+  },
+  {
+    "transaction_id": "demo-seed-20",
+    "fraud_score": 0.184058120188,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.2834518015092134,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 6.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.2834518015092134,
+        "xgboost": 0.1757468581199646,
+        "isolation": 0.7142715750662086,
+        "features": {
+          "log_amount": 5.484796933490655,
+          "amount_ratio": 1.5384615384615385,
+          "hour_sin": 0.2798290140309927,
+          "hour_cos": -0.9600498543859285,
+          "velocity_count_ratio": 6.0,
+          "velocity_sum_ratio": 26.153846153846153,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.33599672543774045,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 6.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.184058120188,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09920813052822468,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.184058120188,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.097416975535452,
+      "behavioral": 4.441208962816745,
+      "network": 0.036209006793797016,
+      "fusion": 0.004334026016294956,
+      "total_pipeline": 10.58229198679328
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.983656Z"
+  },
+  {
+    "transaction_id": "demo-seed-21",
+    "fraud_score": 0.184745071898,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.2854145206814138,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 6.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.2854145206814138,
+        "xgboost": 0.1757468581199646,
+        "isolation": 0.7240851709272106,
+        "features": {
+          "log_amount": 5.5134287461649825,
+          "amount_ratio": 1.5153374233128833,
+          "hour_sin": 0.2756373558169992,
+          "hour_cos": -0.9612616959383189,
+          "velocity_count_ratio": 6.0,
+          "velocity_sum_ratio": 26.061349693251532,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.3442857012566955,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 6.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.184745071898,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09989508223849483,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.184745071898,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 5.974041996523738,
+      "behavioral": 4.532165999989957,
+      "network": 0.03904203185811639,
+      "fusion": 0.004916975740343332,
+      "total_pipeline": 10.55329100927338
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:47.994323Z"
+  },
+  {
+    "transaction_id": "demo-seed-22",
+    "fraud_score": 0.184745071898,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.2854145206814138,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 6.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.2854145206814138,
+        "xgboost": 0.1757468581199646,
+        "isolation": 0.7240851709272106,
+        "features": {
+          "log_amount": 5.541263545158426,
+          "amount_ratio": 1.4941176470588236,
+          "hour_sin": 0.2714404498650746,
+          "hour_cos": -0.9624552364536472,
+          "velocity_count_ratio": 6.0,
+          "velocity_sum_ratio": 25.976470588235294,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.35250653440155266,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 6.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.184745071898,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09989508223849483,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.184745071898,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.251082988455892,
+      "behavioral": 4.546042007859796,
+      "network": 0.040958053432404995,
+      "fusion": 0.00500003807246685,
+      "total_pipeline": 10.845916985999793
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:48.005313Z"
+  },
+  {
+    "transaction_id": "demo-seed-23",
+    "fraud_score": 0.184745071898,
+    "risk_tier": "low",
+    "decision": "auto_pass",
+    "sub_scores": {
+      "text": 0.07099997045530283,
+      "behavioral": 0.2854145206814138,
+      "network": 0.3,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Transaction count 6.0\u00d7 historical rate"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "baseline scam evidence",
+            "value": 0.08874996306912854
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.3039054274559021
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.07099997045530283,
+        "route": "baseline",
+        "baseline": 0.08874996306912854,
+        "bert": null,
+        "semantic": 0.0
+      },
+      "behavioral": {
+        "score": 0.2854145206814138,
+        "xgboost": 0.1757468581199646,
+        "isolation": 0.7240851709272106,
+        "features": {
+          "log_amount": 5.568344503761097,
+          "amount_ratio": 1.4745762711864407,
+          "hour_sin": 0.2672383760782566,
+          "hour_cos": -0.9636304532086231,
+          "velocity_count_ratio": 6.0,
+          "velocity_sum_ratio": 25.89830508474576,
+          "new_payee": 0.0,
+          "round_amount": 0.0,
+          "age_size_ratio": 0.3606603361284855,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 6.0\u00d7 historical rate"
+        ]
+      },
+      "network": {
+        "score": 0.3,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 4.0,
+          "sender_fan_out": 3.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.3
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.184745071898,
+      "tier": "low",
+      "decision": "auto_pass",
+      "contributions": {
+        "text": 0.02484998965935599,
+        "behavioral": 0.09989508223849483,
+        "network": 0.06,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.184745071898,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 6.024792033713311,
+      "behavioral": 4.44066699128598,
+      "network": 0.03895896952599287,
+      "fusion": 0.004582980182021856,
+      "total_pipeline": 10.511542030144483
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:48.015943Z"
+  },
+  {
+    "transaction_id": "demo-seed-scam",
+    "fraud_score": 0.9,
+    "risk_tier": "high",
+    "decision": "auto_block",
+    "sub_scores": {
+      "text": 0.98,
+      "behavioral": 0.19883148177617702,
+      "network": 0.075,
+      "rules": 0.98
+    },
+    "reasons": [
+      "High-confidence credential request triggered the explicit rule floor",
+      "Transaction count 7.0\u00d7 historical rate",
+      "New payee",
+      "send your otp"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.98,
+        "signals": [
+          {
+            "name": "credential_request",
+            "detail": "send your otp",
+            "value": 0.98
+          },
+          {
+            "name": "urgency",
+            "detail": "Pressure or urgency language detected",
+            "value": 0.3333333333333333
+          }
+        ],
+        "urgency": 0.3333333333333333,
+        "entities": [
+          {
+            "text": "OTP",
+            "label": "ORG"
+          },
+          {
+            "text": "agent",
+            "label": "ROLE"
+          }
+        ],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.98,
+        "route": "rule_short_circuit",
+        "baseline": null,
+        "bert": null,
+        "semantic": null
+      },
+      "behavioral": {
+        "score": 0.19883148177617702,
+        "xgboost": 0.07084259390830994,
+        "isolation": 0.7107870332476453,
+        "features": {
+          "log_amount": 6.2166061010848646,
+          "amount_ratio": 2.824858757062147,
+          "hour_sin": 0.11753739745783798,
+          "hour_cos": -0.9930684569549263,
+          "velocity_count_ratio": 7.0,
+          "velocity_sum_ratio": 35.29943502824859,
+          "new_payee": 1.0,
+          "round_amount": 1.0,
+          "age_size_ratio": 0.6053792021874724,
+          "device_changed": 0.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Transaction count 7.0\u00d7 historical rate",
+          "New payee"
+        ]
+      },
+      "network": {
+        "score": 0.075,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 1.0,
+          "sender_fan_out": 4.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.075
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.9,
+      "tier": "high",
+      "decision": "auto_block",
+      "contributions": {
+        "text": 0.34299999999999997,
+        "behavioral": 0.06959101862166195,
+        "network": 0.015,
+        "rules": 0.098
+      },
+      "weighted_sum": 0.525591018622,
+      "rule_override_delta": 0.37440898137800005,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 4.555332998279482,
+      "behavioral": 4.386499989777803,
+      "network": 0.03512500552460551,
+      "fusion": 0.00500003807246685,
+      "total_pipeline": 8.984957996290177
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:48.025037Z"
+  },
+  {
+    "transaction_id": "demo-seed-anomaly",
+    "fraud_score": 0.482286259588,
+    "risk_tier": "medium",
+    "decision": "manual_review",
+    "sub_scores": {
+      "text": 0.35218552707613304,
+      "behavioral": 0.9829180717468262,
+      "network": 0.075,
+      "rules": 0.0
+    },
+    "reasons": [
+      "Amount 51.6\u00d7 sender median",
+      "Transaction count 7.0\u00d7 historical rate",
+      "New payee",
+      "Device changed"
+    ],
+    "layers": {
+      "text": {
+        "rules": 0.0,
+        "signals": [
+          {
+            "name": "text_classifier",
+            "detail": "bert scam evidence",
+            "value": 0.43401395379231367
+          },
+          {
+            "name": "semantic_match",
+            "detail": "You won a reward. Pay a processing fee to receive it.",
+            "value": 0.4165812134742737
+          }
+        ],
+        "urgency": 0.0,
+        "entities": [],
+        "script": {
+          "scripts": [
+            "LATIN"
+          ],
+          "unusual_mix": false,
+          "note": "Context signal only; multilingual text is not evidence of fraud."
+        },
+        "available": true,
+        "score": 0.35218552707613304,
+        "route": "bert",
+        "baseline": 0.279400862721751,
+        "bert": 0.5370893478393555,
+        "semantic": 0.03316242694854732
+      },
+      "behavioral": {
+        "score": 0.9829180717468262,
+        "xgboost": 0.9786475896835327,
+        "isolation": 1.0,
+        "features": {
+          "log_amount": 9.15915233520675,
+          "amount_ratio": 51.630434782608695,
+          "hour_sin": 0.11320321376790689,
+          "hour_cos": -0.9935718556765875,
+          "velocity_count_ratio": 7.0,
+          "velocity_sum_ratio": 230.52173913043478,
+          "new_payee": 1.0,
+          "round_amount": 1.0,
+          "age_size_ratio": 7.773173680482536,
+          "device_changed": 1.0,
+          "geo_changed": 0.0
+        },
+        "reasons": [
+          "Amount 51.6\u00d7 sender median",
+          "Transaction count 7.0\u00d7 historical rate",
+          "New payee",
+          "Device changed"
+        ]
+      },
+      "network": {
+        "score": 0.075,
+        "features": {
+          "recipient_flag_rate": 0.0,
+          "recipient_fan_in": 1.0,
+          "sender_fan_out": 4.0,
+          "shared_unrelated": 0.0,
+          "rapid_forwarding": 0.0,
+          "sender_fan_in": 0.0
+        },
+        "components": {
+          "recipient_flags": 0.0,
+          "shared_infrastructure": 0.0,
+          "fan_in_and_forwarding": 0.075
+        },
+        "reasons": []
+      }
+    },
+    "fusion": {
+      "score": 0.482286259588,
+      "tier": "medium",
+      "decision": "manual_review",
+      "contributions": {
+        "text": 0.12326493447664656,
+        "behavioral": 0.34402132511138916,
+        "network": 0.015,
+        "rules": 0.0
+      },
+      "weighted_sum": 0.482286259588,
+      "rule_override_delta": 0.0,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    },
+    "latency_ms": {
+      "text": 24.066000012680888,
+      "behavioral": 4.597000021021813,
+      "network": 0.04466704558581114,
+      "fusion": 0.00600004568696022,
+      "total_pipeline": 28.716875007376075
+    },
+    "model_version": "69eefd789f504dd4",
+    "scored_at": "2026-09-11T11:36:48.053858Z"
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "transaction_id": "demo-seed-scam",
+  "fraud_score": 0.9,
+  "risk_tier": "high",
+  "decision": "auto_block",
+  "sub_scores": {
+    "text": 0.98,
+    "behavioral": 0.19883148177617702,
+    "network": 0.075,
+    "rules": 0.98
+  },
+  "reasons": [
+    "High-confidence credential request triggered the explicit rule floor",
+    "Transaction count 7.0\u00d7 historical rate",
+    "New payee",
+    "send your otp"
+  ],
+  "layers": {
+    "text": {
+      "rules": 0.98,
+      "signals": [
+        {
+          "name": "credential_request",
+          "detail": "send your otp",
+          "value": 0.98
+        },
+        {
+          "name": "urgency",
+          "detail": "Pressure or urgency language detected",
+          "value": 0.3333333333333333
+        }
+      ],
+      "urgency": 0.3333333333333333,
+      "entities": [
+        {
+          "text": "OTP",
+          "label": "ORG"
+        },
+        {
+          "text": "agent",
+          "label": "ROLE"
+        }
+      ],
+      "script": {
+        "scripts": [
+          "LATIN"
+        ],
+        "unusual_mix": false,
+        "note": "Context signal only; multilingual text is not evidence of fraud."
+      },
+      "available": true,
+      "score": 0.98,
+      "route": "rule_short_circuit",
+      "baseline": null,
+      "bert": null,
+      "semantic": null
+    },
+    "behavioral": {
+      "score": 0.19883148177617702,
+      "xgboost": 0.07084259390830994,
+      "isolation": 0.7107870332476453,
+      "features": {
+        "log_amount": 6.2166061010848646,
+        "amount_ratio": 2.824858757062147,
+        "hour_sin": 0.11753739745783798,
+        "hour_cos": -0.9930684569549263,
+        "velocity_count_ratio": 7.0,
+        "velocity_sum_ratio": 35.29943502824859,
+        "new_payee": 1.0,
+        "round_amount": 1.0,
+        "age_size_ratio": 0.6053792021874724,
+        "device_changed": 0.0,
+        "geo_changed": 0.0
+      },
+      "reasons": [
+        "Transaction count 7.0\u00d7 historical rate",
+        "New payee"
+      ]
+    },
+    "network": {
+      "score": 0.075,
+      "features": {
+        "recipient_flag_rate": 0.0,
+        "recipient_fan_in": 1.0,
+        "sender_fan_out": 4.0,
+        "shared_unrelated": 0.0,
+        "rapid_forwarding": 0.0,
+        "sender_fan_in": 0.0
+      },
+      "components": {
+        "recipient_flags": 0.0,
+        "shared_infrastructure": 0.0,
+        "fan_in_and_forwarding": 0.075
+      },
+      "reasons": []
+    }
+  },
+  "fusion": {
+    "score": 0.9,
+    "tier": "high",
+    "decision": "auto_block",
+    "contributions": {
+      "text": 0.34299999999999997,
+      "behavioral": 0.06959101862166195,
+      "network": 0.015,
+      "rules": 0.098
+    },
+    "weighted_sum": 0.525591018622,
+    "rule_override_delta": 0.37440898137800005,
+    "thresholds": {
+      "review_threshold": 0.4,
+      "block_threshold": 0.575
+    },
+    "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+  },
+  "latency_ms": {
+    "text": 4.555332998279482,
+    "behavioral": 4.386499989777803,
+    "network": 0.03512500552460551,
+    "fusion": 0.00500003807246685,
+    "total_pipeline": 8.984957996290177
+  },
+  "model_version": "69eefd789f504dd4",
+  "scored_at": "2026-09-11T11:36:48.025037Z"
+}

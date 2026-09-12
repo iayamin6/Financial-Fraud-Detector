@@ -1,0 +1,130 @@
+{
+  "transaction_id": "demo-seed-scam",
+  "model_version": "69eefd789f504dd4",
+  "methods": {
+    "behavioral": {
+      "method": "SHAP permutation: combined XGBoost + normalized Isolation Forest score",
+      "units": "behavioral risk score",
+      "base_value": 0.2704743360472509,
+      "prediction": 0.19883148177617702,
+      "contributions": [
+        {
+          "feature": "log_amount",
+          "value": 6.2166061010848646,
+          "contribution": -0.010103815829110435
+        },
+        {
+          "feature": "amount_ratio",
+          "value": 2.824858757062147,
+          "contribution": 0.005120309995609418
+        },
+        {
+          "feature": "hour_sin",
+          "value": 0.11753739745783798,
+          "contribution": -0.0002367175063571203
+        },
+        {
+          "feature": "hour_cos",
+          "value": -0.9930684569549263,
+          "contribution": -0.08896983158227971
+        },
+        {
+          "feature": "velocity_count_ratio",
+          "value": 7.0,
+          "contribution": 0.09225183261122016
+        },
+        {
+          "feature": "velocity_sum_ratio",
+          "value": 35.29943502824859,
+          "contribution": -0.048517891640044955
+        },
+        {
+          "feature": "new_payee",
+          "value": 1.0,
+          "contribution": -0.015367986354860141
+        },
+        {
+          "feature": "round_amount",
+          "value": 1.0,
+          "contribution": 0.0
+        },
+        {
+          "feature": "age_size_ratio",
+          "value": 0.6053792021874724,
+          "contribution": 0.004544740161974453
+        },
+        {
+          "feature": "device_changed",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "feature": "geo_changed",
+          "value": 0.0,
+          "contribution": -0.01036349487228358
+        }
+      ],
+      "reconstruction_error": 7.450580152834618e-10,
+      "limitation": "One seeded permutation cycle and 16 training background rows; correlated features are perturbed independently."
+    },
+    "text": {
+      "method": "Exact rule evidence / no model inference",
+      "route": "rule_short_circuit",
+      "signals": [
+        {
+          "name": "credential_request",
+          "detail": "send your otp",
+          "value": 0.98
+        },
+        {
+          "name": "urgency",
+          "detail": "Pressure or urgency language detected",
+          "value": 0.3333333333333333
+        }
+      ]
+    },
+    "network": {
+      "method": "Exact transparent formula; maximum of named components",
+      "score": 0.075,
+      "features": {
+        "recipient_flag_rate": 0.0,
+        "recipient_fan_in": 1.0,
+        "sender_fan_out": 4.0,
+        "shared_unrelated": 0.0,
+        "rapid_forwarding": 0.0,
+        "sender_fan_in": 0.0
+      },
+      "components": {
+        "recipient_flags": 0.0,
+        "shared_infrastructure": 0.0,
+        "fan_in_and_forwarding": 0.075
+      },
+      "reasons": []
+    },
+    "fusion": {
+      "method": "Exact weighted contributions relative to zero plus rule override",
+      "score": 0.9,
+      "tier": "high",
+      "decision": "auto_block",
+      "contributions": {
+        "text": 0.34299999999999997,
+        "behavioral": 0.06959101862166195,
+        "network": 0.015,
+        "rules": 0.098
+      },
+      "weighted_sum": 0.525591018622,
+      "rule_override_delta": 0.37440898137800005,
+      "thresholds": {
+        "review_threshold": 0.4,
+        "block_threshold": 0.575
+      },
+      "missing_text_policy": "Fixed weights; missing text contributes zero, without asserting the transaction is safe."
+    }
+  },
+  "reasons": [
+    "High-confidence credential request triggered the explicit rule floor",
+    "Transaction count 7.0\u00d7 historical rate",
+    "New payee",
+    "send your otp"
+  ]
+}

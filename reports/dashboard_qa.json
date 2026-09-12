@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "normal demo is low risk",
+    "OTP scam demo is high risk",
+    "all 5 system checks pass",
+    "custom form scores payment",
+    "recent checks and threshold preview render",
+    "CSV page renders",
+    "beginner guide renders"
+  ],
+  "method": "Streamlit AppTest against live API"
+}

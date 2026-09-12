@@ -1,0 +1,23 @@
+# Match the trained sklearn artifacts; install CPU-only torch on Linux.
+--extra-index-url https://download.pytorch.org/whl/cpu
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.5
+PyYAML==6.0.3
+numpy==2.4.6
+pandas==3.0.5
+scikit-learn==1.8.0
+imbalanced-learn==0.14.2
+xgboost==3.2.0
+networkx==3.6.1
+joblib==1.6.0
+transformers==4.57.3
+torch==2.14.0
+sentence-transformers==5.7.0
+spacy==3.8.16
+shap==0.51.0
+lime==0.2.0.1
+streamlit==1.63.0
+httpx==0.28.1
+python-multipart==0.0.32
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

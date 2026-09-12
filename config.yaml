@@ -1,0 +1,94 @@
+seed: 42
+paths:
+  data: data
+  models: models
+  reports: reports
+  database: data/fraud.sqlite3
+nlp:
+  base_model: distilbert/distilbert-base-uncased
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  spacy_model: en_core_web_sm
+  max_length: 96
+  epochs: 3
+  batch_size: 16
+  learning_rate: 3.0e-05
+  prefilter_low: 0.12
+  prefilter_high: 0.88
+  rule_short_circuit: 0.95
+  mixed_script_min_fraction: 0.2
+  allowed_script_pairs: []
+  urgency_patterns:
+  - \burgent\b
+  - \bimmediately\b
+  - \bwithin \d+ minutes\b
+  - \blast warning\b
+  - \bact now\b
+  - \bsuspended\b
+  - \bblocked\b
+  rules:
+  - name: credential_request
+    pattern: \b(?:send|share|tell|provide|reply with|give|forward)\b.{0,45}\b(?:otp|pin|password|verification
+      code|security code)\b
+    score: 0.98
+  - name: account_pressure
+    pattern: \b(?:account|wallet|card)\b.{0,35}\b(?:blocked|suspended|frozen)\b.{0,70}\b(?:click|verify|link|restore)\b
+    score: 0.85
+  - name: advance_fee
+    pattern: \b(?:prize|lottery|reward|grant)\b.{0,70}\b(?:fee|deposit|pay)\b
+    score: 0.8
+  known_scams:
+  - Send your OTP immediately to prevent account suspension.
+  - Your bank account is frozen. Click the link and verify your password.
+  - I am your bank agent. Transfer money to my personal wallet to restore access.
+  - You won a reward. Pay a processing fee to receive it.
+  baseline_C: 4
+  model_weights:
+    baseline: 0.4
+    bert: 0.6
+  score_weights:
+    model: 0.8
+    semantic: 0.15
+    urgency: 0.05
+  semantic_floor: 0.4
+  semantic_span: 0.5
+behavior:
+  window_minutes: 60
+  baseline_hours: 24
+  default_amount: 200
+  default_hourly_count: 0.25
+  isolation_weight: 0.2
+  xgb_estimators: 100
+  xgb_max_depth: 3
+  xgb_learning_rate: 0.08
+  isolation_estimators: 100
+  isolation_quantiles:
+  - 0.5
+  - 0.99
+network:
+  window_hours: 24
+  fan_threshold: 4
+  forwarding_minutes: 30
+  component_weights:
+    recipient_flags: 0.9
+    shared_infrastructure: 0.8
+    fan_in: 0.3
+    forwarding: 0.6
+  shared_saturation: 3
+fusion:
+  weights:
+    text: 0.35
+    behavioral: 0.35
+    network: 0.2
+    rules: 0.1
+  review_threshold: 0.4
+  block_threshold: 0.575
+  hard_rule_floor: 0.9
+api:
+  batch_limit: 250
+  csv_max_bytes: 2000000
+  host: 127.0.0.1
+  port: 8765
+  dashboard_port: 8501
+explain:
+  lime_samples: 128
+  top_features: 8

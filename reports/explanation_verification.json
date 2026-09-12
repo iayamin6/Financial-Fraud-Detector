@@ -1,0 +1,128 @@
+{
+  "transaction_id": "tx-03599",
+  "model_version": "explanation-verification",
+  "reasons": [],
+  "methods": {
+    "behavioral": {
+      "method": "SHAP permutation: combined XGBoost + normalized Isolation Forest score",
+      "units": "behavioral risk score",
+      "base_value": 0.2704743360472509,
+      "prediction": 0.41253194808959964,
+      "contributions": [
+        {
+          "feature": "log_amount",
+          "value": 4.147727338787214,
+          "contribution": 0.0681865090355511
+        },
+        {
+          "feature": "amount_ratio",
+          "value": 0.4250426475605595,
+          "contribution": -0.009302757126045003
+        },
+        {
+          "feature": "hour_sin",
+          "value": -0.9930684569549264,
+          "contribution": -0.020352102257696847
+        },
+        {
+          "feature": "hour_cos",
+          "value": -0.1175373974578376,
+          "contribution": 0.04123839382246958
+        },
+        {
+          "feature": "velocity_count_ratio",
+          "value": 1.0,
+          "contribution": 0.02863216629154597
+        },
+        {
+          "feature": "velocity_sum_ratio",
+          "value": 0.9775980893892868,
+          "contribution": 0.0730501149826686
+        },
+        {
+          "feature": "new_payee",
+          "value": 1.0,
+          "contribution": -0.018408681562291418
+        },
+        {
+          "feature": "round_amount",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "feature": "age_size_ratio",
+          "value": 0.0541716323565704,
+          "contribution": -0.029524155285190715
+        },
+        {
+          "feature": "device_changed",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "feature": "geo_changed",
+          "value": 0.0,
+          "contribution": 0.008538118180872967
+        }
+      ],
+      "reconstruction_error": 5.960464510845753e-09,
+      "limitation": "One seeded permutation cycle and 16 training background rows; correlated features are perturbed independently."
+    },
+    "text": {
+      "method": "LIME over the complete routed text risk function",
+      "route": "baseline",
+      "contributions": [
+        {
+          "token": "completed",
+          "contribution": -0.15026785013172234
+        },
+        {
+          "token": "Thank",
+          "contribution": -0.1318731390683747
+        },
+        {
+          "token": "grocery",
+          "contribution": -0.05245884154600376
+        },
+        {
+          "token": "you",
+          "contribution": -0.04783059717421375
+        },
+        {
+          "token": "was",
+          "contribution": -0.043578714182625156
+        },
+        {
+          "token": "Your",
+          "contribution": 0.002861331273040604
+        },
+        {
+          "token": "purchase",
+          "contribution": -0.0013270605690377064
+        }
+      ],
+      "local_fidelity_r2": 0.9173430054127485,
+      "local_prediction": 0.05335247046014108,
+      "actual_prediction": 0.055212596072394496,
+      "signals": [
+        {
+          "name": "text_classifier",
+          "detail": "baseline scam evidence",
+          "value": 0.06901574509049312
+        },
+        {
+          "name": "semantic_match",
+          "detail": "You won a reward. Pay a processing fee to receive it.",
+          "value": 0.3407852053642273
+        }
+      ],
+      "limitation": "Local surrogate, not causal evidence; routing can change under token removal. Low R\u00b2 means unreliable token attribution."
+    },
+    "network": {
+      "method": "Exact transparent formula; maximum of named components"
+    },
+    "fusion": {
+      "method": "Exact weighted contributions relative to zero plus rule override"
+    }
+  }
+}

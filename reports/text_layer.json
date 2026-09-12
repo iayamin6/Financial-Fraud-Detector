@@ -1,0 +1,22 @@
+{
+  "n": 80,
+  "positives": 60,
+  "positive_definition": "1 = fraud/scam; 0 = legitimate",
+  "threshold": 0.5,
+  "precision": 0.9230769230769231,
+  "recall": 1.0,
+  "f1": 0.96,
+  "roc_auc": 1.0,
+  "pr_auc": 1.0,
+  "confusion_matrix": [
+    [
+      15,
+      5
+    ],
+    [
+      0,
+      60
+    ]
+  ],
+  "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+}

@@ -1,0 +1,111 @@
+{
+  "positive_definition": "Any fraudulent transaction. Review OR block is a positive detection; auto-block is also evaluated separately.",
+  "weights": {
+    "text": 0.35,
+    "behavioral": 0.35,
+    "network": 0.2,
+    "rules": 0.1
+  },
+  "threshold_selection": "Validation-selected policy: recall-weighted F2 for review and precision constraint for block; see policy_selection.json. Initial policy exploration is retained separately.",
+  "dataset_caveat": "Synthetic scenario recovery, not external validation or calibrated fraud probability.",
+  "validation": {
+    "n": 720,
+    "positives": 86,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.3999999999999999,
+    "precision": 0.29411764705882354,
+    "recall": 0.813953488372093,
+    "f1": 0.43209876543209874,
+    "roc_auc": 0.8417760985987821,
+    "pr_auc": 0.6352574406054535,
+    "confusion_matrix": [
+      [
+        466,
+        168
+      ],
+      [
+        16,
+        70
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "validation_auto_block": {
+    "n": 720,
+    "positives": 86,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.575,
+    "precision": 0.9736842105263158,
+    "recall": 0.43023255813953487,
+    "f1": 0.5967741935483871,
+    "roc_auc": 0.8417760985987821,
+    "pr_auc": 0.6352574406054535,
+    "confusion_matrix": [
+      [
+        633,
+        1
+      ],
+      [
+        49,
+        37
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "validation_scenario_detection": {
+    "behavior": 0.90625,
+    "legit": 0.26498422712933756,
+    "mule": 0.8,
+    "social": 0.7241379310344828
+  },
+  "test": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.3999999999999999,
+    "precision": 0.6865671641791045,
+    "recall": 0.696969696969697,
+    "f1": 0.6917293233082706,
+    "roc_auc": 0.9405986470206653,
+    "pr_auc": 0.6623443158594126,
+    "confusion_matrix": [
+      [
+        633,
+        21
+      ],
+      [
+        20,
+        46
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "test_auto_block": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.575,
+    "precision": 0.8,
+    "recall": 0.06060606060606061,
+    "f1": 0.11267605633802817,
+    "roc_auc": 0.9405986470206653,
+    "pr_auc": 0.6623443158594126,
+    "confusion_matrix": [
+      [
+        653,
+        1
+      ],
+      [
+        62,
+        4
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "test_scenario_detection": {
+    "behavior": 0.9545454545454546,
+    "legit": 0.03211009174311927,
+    "mule": 0.6818181818181818,
+    "social": 0.45454545454545453
+  }
+}

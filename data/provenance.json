@@ -1,0 +1,8 @@
+{
+  "source": "Original synthetic templates and transaction scenarios; not PaySim",
+  "seed": 42,
+  "rows": 3600,
+  "text_rows": 736,
+  "split": "60/20/20 chronological transactions; disjoint text templates",
+  "caveat": "Same generator across splits. Metrics measure synthetic scenario recovery, not bank deployment readiness."
+}

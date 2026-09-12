@@ -1,0 +1,27 @@
+transaction_id,sender_id,recipient_id,amount,timestamp,account_age_days,device_id,relationship_group,text
+demo-seed-00,customer-0,merchant-0,100,2026-09-11T10:35:10.535073+00:00,600,device-0,group-0,Grocery purchase receipt. Thank you.
+demo-seed-01,customer-1,merchant-1,107,2026-09-11T10:36:10.535073+00:00,600,device-1,group-1,Grocery purchase receipt. Thank you.
+demo-seed-02,customer-2,merchant-2,114,2026-09-11T10:37:10.535073+00:00,600,device-2,group-2,Grocery purchase receipt. Thank you.
+demo-seed-03,customer-3,merchant-0,121,2026-09-11T10:38:10.535073+00:00,600,device-3,group-3,Grocery purchase receipt. Thank you.
+demo-seed-04,customer-0,merchant-1,128,2026-09-11T10:39:10.535073+00:00,600,device-0,group-0,Grocery purchase receipt. Thank you.
+demo-seed-05,customer-1,merchant-2,135,2026-09-11T10:40:10.535073+00:00,600,device-1,group-1,Grocery purchase receipt. Thank you.
+demo-seed-06,customer-2,merchant-0,142,2026-09-11T10:41:10.535073+00:00,600,device-2,group-2,Grocery purchase receipt. Thank you.
+demo-seed-07,customer-3,merchant-1,149,2026-09-11T10:42:10.535073+00:00,600,device-3,group-3,Grocery purchase receipt. Thank you.
+demo-seed-08,customer-0,merchant-2,156,2026-09-11T10:43:10.535073+00:00,600,device-0,group-0,Grocery purchase receipt. Thank you.
+demo-seed-09,customer-1,merchant-0,163,2026-09-11T10:44:10.535073+00:00,600,device-1,group-1,Grocery purchase receipt. Thank you.
+demo-seed-10,customer-2,merchant-1,170,2026-09-11T10:45:10.535073+00:00,600,device-2,group-2,Grocery purchase receipt. Thank you.
+demo-seed-11,customer-3,merchant-2,177,2026-09-11T10:46:10.535073+00:00,600,device-3,group-3,Grocery purchase receipt. Thank you.
+demo-seed-12,customer-0,merchant-0,184,2026-09-11T10:47:10.535073+00:00,600,device-0,group-0,Grocery purchase receipt. Thank you.
+demo-seed-13,customer-1,merchant-1,191,2026-09-11T10:48:10.535073+00:00,600,device-1,group-1,Grocery purchase receipt. Thank you.
+demo-seed-14,customer-2,merchant-2,198,2026-09-11T10:49:10.535073+00:00,600,device-2,group-2,Grocery purchase receipt. Thank you.
+demo-seed-15,customer-3,merchant-0,205,2026-09-11T10:50:10.535073+00:00,600,device-3,group-3,Grocery purchase receipt. Thank you.
+demo-seed-16,customer-0,merchant-1,212,2026-09-11T10:51:10.535073+00:00,600,device-0,group-0,Grocery purchase receipt. Thank you.
+demo-seed-17,customer-1,merchant-2,219,2026-09-11T10:52:10.535073+00:00,600,device-1,group-1,Grocery purchase receipt. Thank you.
+demo-seed-18,customer-2,merchant-0,226,2026-09-11T10:53:10.535073+00:00,600,device-2,group-2,Grocery purchase receipt. Thank you.
+demo-seed-19,customer-3,merchant-1,233,2026-09-11T10:54:10.535073+00:00,600,device-3,group-3,Grocery purchase receipt. Thank you.
+demo-seed-20,customer-0,merchant-2,240,2026-09-11T10:55:10.535073+00:00,600,device-0,group-0,Grocery purchase receipt. Thank you.
+demo-seed-21,customer-1,merchant-0,247,2026-09-11T10:56:10.535073+00:00,600,device-1,group-1,Grocery purchase receipt. Thank you.
+demo-seed-22,customer-2,merchant-1,254,2026-09-11T10:57:10.535073+00:00,600,device-2,group-2,Grocery purchase receipt. Thank you.
+demo-seed-23,customer-3,merchant-2,261,2026-09-11T10:58:10.535073+00:00,600,device-3,group-3,Grocery purchase receipt. Thank you.
+demo-seed-scam,customer-1,new-agent,500,2026-09-11T11:33:10.535073+00:00,600,device-1,group-1,Send your OTP to the bank agent immediately to restore your account.
+demo-seed-anomaly,customer-2,new-payee,9500,2026-09-11T11:34:10.535073+00:00,3,new-device,group-2,Payment
