@@ -23,6 +23,12 @@ To repeat the guided UI checks automatically while the API is running: `python s
 
 ## Streamlit Community Cloud
 
+**Live app:** https://financial-fraud-detector-iayamin6.streamlit.app/
+
+Changes committed and pushed to this repository’s `main` branch automatically update the live app. Changes to `requirements.txt` or `packages.txt` trigger dependency installation and take longer. Changes on another branch go live only after merging into `main`. Local edits must be committed and pushed first. Keep the repository name, branch, and `streamlit_app.py` entrypoint stable.
+
+No GitHub Actions workflow or deployment token is needed: Streamlit Community Cloud watches the selected branch directly. See [Streamlit’s update documentation](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app).
+
 Deploy repository `iayamin6/Financial-Fraud-Detector`, branch `main`, entrypoint `streamlit_app.py`, with **Python 3.11** in Advanced settings. Dependencies are in `requirements.txt` and `packages.txt`; Git LFS supplies the trained weights.
 
 To run the same single-process version locally after installing dependencies:

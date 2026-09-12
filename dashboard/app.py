@@ -56,6 +56,7 @@ with st.sidebar:
     page = st.radio('Workspace', PAGES, key='page', label_visibility='collapsed')
     st.markdown('<div class="side-note">A safe place to explore fraud detection.<br><br>All checks are recommendations. No money is moved or blocked.</div>', unsafe_allow_html=True)
     if EMBEDDED:
+        st.caption('Cloud demo · Ready to explore')
         st.caption('Your checks are private to this browser session. They may disappear when the session ends or the app restarts.')
     with st.expander('Connection settings'):
         url = st.text_input('Service address', value=os.getenv('FRAUD_API_URL', f"http://{cfg['api']['host']}:{cfg['api']['port']}"), key='api_url', disabled=EMBEDDED).rstrip('/')
