@@ -12,7 +12,10 @@ def cases_page(request):
         if st.button('Load AML example',key='aml_demo'):
             from fraud.demo import aml_example
             from fraud.config import load_config
-            request('POST','/score/batch',json=aml_example(scenario,load_config()));st.rerun()
+            request('POST','/score/batch',json=aml_example(scenario,load_config()))
+            latest=request('GET','/cases')
+            if latest: st.session_state['selected_case']=latest[0]['case_id']
+            st.rerun()
     with st.expander('Create a case for an existing payment'):
         txid=st.text_input('Transaction ID',key='case_txid')
         if st.button('Create case',key='create_case'):
@@ -21,8 +24,9 @@ def cases_page(request):
     if not cases:
         st.info('Run the OTP demo or upload payments first. Review-worthy payments automatically create a case.');return
     st.dataframe(pd.DataFrame(cases),hide_index=True,width='stretch')
-    cid=st.selectbox('Select a case',[c['case_id'] for c in cases],format_func=lambda x:next(f"{c['transaction_id']} · {c['status']}" for c in cases if c['case_id']==x),key='selected_case')
+    cid=st.selectbox('Select a case',[c['case_id'] for c in cases],format_func=lambda x:next(c['transaction_id'] for c in cases if c['case_id']==x),key='selected_case')
     case=request('GET','/cases/'+cid);score=case['score']; b=score['layers']['behavioral']
+    st.caption(f"Selected payment: {case['transaction_id']} · Status: {case['status']}")
     a,c,d=st.columns(3)
     a.metric('Fused risk',f"{score['fraud_score']*100:.0f}/100")
     c.metric('Supervised model',f"{b['xgboost']*100:.0f}/100")
