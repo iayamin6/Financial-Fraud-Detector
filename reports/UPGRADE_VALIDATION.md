@@ -8,6 +8,6 @@
 - The 40 constructed structuring/ordinary-payment scenarios pass. This tests intended rule behavior, not real-world AML precision.
 - Retrieval recall@3 is 7/7 on seven author-created queries. Local FLAN-T5 selection produced a valid citation with verbatim grounding. The assistant emits cited policy text, not unconstrained allegations.
 - Five MLflow evaluation runs were created locally, including configuration, metrics, version hashes and relevant saved model artifacts. Original models were not retrained as part of this upgrade.
-- Docker configuration is supplied. A local container build was not executed because the Docker daemon was unavailable; do not interpret Python tests as a container validation.
+- Docker configuration is supplied. The local container build failed with a Docker disk I/O error while the host disk was full. GitHub Actions includes a separate Linux Docker build check; do not interpret Python tests as container validation.
 
 All reported predictive metrics use synthetic development data. No real banking, regulatory-compliance, multilingual-model or financial-loss-prevention claim is made.
