@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8765:8765"
+    environment:
+      FRAUD_SECURITY_MODE: authenticated
+      FRAUD_API_KEYS: ${FRAUD_API_KEYS:?Set named API keys; see docs/OPERATIONS.md}
+      FRAUD_DATABASE: /app/runtime/fraud.sqlite3
+    volumes:
+      - fraud-data:/app/runtime
+    restart: unless-stopped
+volumes:
+  fraud-data:

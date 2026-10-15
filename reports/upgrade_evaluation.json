@@ -1,0 +1,239 @@
+{
+  "scope": "Synthetic development holdout and constructed regression scenarios. No external banking validation.",
+  "positive_definition": "Transaction: any synthetic fraud; NLP: any scam class. AML scenarios: constructed structuring pattern, not confirmed money laundering.",
+  "nlp": {
+    "n": 80,
+    "positives": 60,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.5,
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1": 0.96,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+      [
+        15,
+        5
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "supervised_transaction": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.5,
+    "precision": 0.2876712328767123,
+    "recall": 0.6363636363636364,
+    "f1": 0.39622641509433965,
+    "roc_auc": 0.7719974979149293,
+    "pr_auc": 0.5466209058765124,
+    "confusion_matrix": [
+      [
+        550,
+        104
+      ],
+      [
+        24,
+        42
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "anomaly": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.5,
+    "precision": 0.24324324324324326,
+    "recall": 0.4090909090909091,
+    "f1": 0.3050847457627119,
+    "roc_auc": 0.7166504494486146,
+    "pr_auc": 0.3396809850751367,
+    "confusion_matrix": [
+      [
+        570,
+        84
+      ],
+      [
+        39,
+        27
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "behavioral": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.5,
+    "precision": 0.4788732394366197,
+    "recall": 0.5151515151515151,
+    "f1": 0.49635036496350365,
+    "roc_auc": 0.7647229172458531,
+    "pr_auc": 0.5402116663559308,
+    "confusion_matrix": [
+      [
+        617,
+        37
+      ],
+      [
+        32,
+        34
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "fusion": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.4,
+    "precision": 0.6865671641791045,
+    "recall": 0.696969696969697,
+    "f1": 0.6917293233082706,
+    "roc_auc": 0.9405986470206653,
+    "pr_auc": 0.6623443158594126,
+    "confusion_matrix": [
+      [
+        633,
+        21
+      ],
+      [
+        20,
+        46
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "transaction_network_without_text_same_weights": {
+    "n": 720,
+    "positives": 66,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.4,
+    "precision": 0.9655172413793104,
+    "recall": 0.42424242424242425,
+    "f1": 0.5894736842105263,
+    "roc_auc": 0.8141390973959782,
+    "pr_auc": 0.6635261493627124,
+    "confusion_matrix": [
+      [
+        653,
+        1
+      ],
+      [
+        38,
+        28
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "ablation_note": "Fixed original weights and policy; removing text reduces available evidence. Not a separately optimized transaction-only model.",
+  "aml_scenario_regression": {
+    "n": 40,
+    "positives": 20,
+    "positive_definition": "1 = fraud/scam; 0 = legitimate",
+    "threshold": 0.5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "confusion_matrix": [
+      [
+        20,
+        0
+      ],
+      [
+        0,
+        20
+      ]
+    ],
+    "confusion_matrix_order": "rows=true [legit,fraud], columns=predicted [legit,fraud]"
+  },
+  "retrieval": {
+    "recall_at_k": 1.0,
+    "queries": [
+      {
+        "query": "How do I investigate an OTP request?",
+        "expected": "FS-OTP-01",
+        "retrieved": [
+          "FS-OTP-01",
+          "FS-MULE-01",
+          "FS-VEL-01"
+        ],
+        "hit": true
+      },
+      {
+        "query": "Repeated payments just below a threshold",
+        "expected": "FS-STR-01",
+        "retrieved": [
+          "FS-STR-01",
+          "FS-VEL-01",
+          "FS-NET-01"
+        ],
+        "hit": true
+      },
+      {
+        "query": "Multiple sources rapidly forwarding funds",
+        "expected": "FS-MULE-01",
+        "retrieved": [
+          "FS-MULE-01",
+          "FS-NET-01",
+          "FS-STR-01"
+        ],
+        "hit": true
+      },
+      {
+        "query": "Circular transfers between connected accounts",
+        "expected": "FS-NET-01",
+        "retrieved": [
+          "FS-NET-01",
+          "FS-MULE-01",
+          "FS-STR-01"
+        ],
+        "hit": true
+      },
+      {
+        "query": "Unusually frequent transactions and anomaly scores",
+        "expected": "FS-VEL-01",
+        "retrieved": [
+          "FS-VEL-01",
+          "FS-STR-01",
+          "FS-MULE-01"
+        ],
+        "hit": true
+      },
+      {
+        "query": "Analyst review and case outcome",
+        "expected": "FS-REVIEW-01",
+        "retrieved": [
+          "FS-REVIEW-01",
+          "FS-DATA-01"
+        ],
+        "hit": true
+      },
+      {
+        "query": "Protecting sensitive information in evidence notes",
+        "expected": "FS-DATA-01",
+        "retrieved": [
+          "FS-DATA-01",
+          "FS-REVIEW-01",
+          "FS-OTP-01"
+        ],
+        "hit": true
+      }
+    ],
+    "note": "Small author-created policy retrieval test, not independent benchmark"
+  },
+  "local_llm": {
+    "mode": "local_llm_grounded",
+    "citation_count": 1,
+    "verbatim_grounding": true
+  }
+}

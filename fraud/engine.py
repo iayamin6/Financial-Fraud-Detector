@@ -9,6 +9,7 @@ from .text import TextLayer
 from .behavior import BehaviorLayer,History,features as behavior_features
 from .network import NetworkLayer,features as network_features
 from .fusion import fuse
+from .aml import analyze as analyze_aml
 from .explain import Explainer
 from .store import Store
 from .schemas import Transaction,ScoreResponse
@@ -26,12 +27,14 @@ class Engine:
         self.explainer=Explainer(cfg,self.text,self.behavior)
         digest=hashlib.sha256(json.dumps({k:v for k,v in cfg.items() if k!='paths'},sort_keys=True).encode())
         for path in sorted(Path(cfg['paths']['models']).rglob('*')):
-            if path.is_file():
+            if path.is_file() and '.cache' not in path.parts:
                 digest.update(str(path.relative_to(cfg['paths']['models'])).encode())
                 with path.open('rb') as f:
                     for chunk in iter(lambda:f.read(1024*1024),b''): digest.update(chunk)
         for path in sorted(Path(__file__).parent.glob('*.py')): digest.update(path.read_bytes())
         self.version=digest.hexdigest()[:16]
+        from .mlops import manifest
+        self.component_versions={k:v['sha256'] for k,v in manifest(cfg).items()}
 
     def _score(self,tx,history):
         start=perf_counter(); timings={}
@@ -40,6 +43,7 @@ class Engine:
         text=timed('text',lambda:self.text.score(tx.text))
         behavior=timed('behavioral',lambda:self.behavior.score(behavior_features(tx,history,self.cfg)))
         network=timed('network',lambda:self.network.score(network_features(tx,history,self.cfg)))
+        aml=timed('aml',lambda:analyze_aml(tx,history,self.cfg))
         sub=dict(text=text['score'],behavioral=behavior['score'],network=network['score'],rules=text['rules'])
         fusion=timed('fusion',lambda:fuse(sub,self.cfg))
         reasons=behavior['reasons']+network['reasons']+[s['detail'] for s in text['signals'] if s['name'] not in {'semantic_match','mixed_scripts'} and s['value']>=.5]
@@ -47,8 +51,8 @@ class Engine:
         if not reasons: reasons=['No strong configured signals; see per-layer scores and model explanation']
         timings['total_pipeline']=(perf_counter()-start)*1000
         result=ScoreResponse(transaction_id=tx.transaction_id,fraud_score=fusion['score'],risk_tier=fusion['tier'],decision=fusion['decision'],
-            sub_scores=sub,reasons=reasons,layers=dict(text=text,behavioral=behavior,network=network),fusion=fusion,latency_ms=timings,
-            model_version=self.version,scored_at=datetime.now(timezone.utc)).model_dump(mode='json')
+            sub_scores=sub,reasons=reasons,layers=dict(text=text,behavioral=behavior,network=network,aml=aml),fusion=fusion,latency_ms=timings,
+            component_versions=self.component_versions,aml_review_required=aml['requires_review'],model_version=self.version,scored_at=datetime.now(timezone.utc)).model_dump(mode='json')
         logger.info('scoring_latency_ms %s',json.dumps(timings))
         return result
 
@@ -79,6 +83,9 @@ class Engine:
                 scored=self._score(tx,history)
                 db.execute('INSERT INTO scores(transaction_id,timestamp,request_json,result_json) VALUES(?,?,?,?)',
                            (tx.transaction_id,tx.timestamp.isoformat(),canonical(tx),json.dumps(scored)))
+                if self.cfg['cases']['auto_create'] and (scored['decision']!='auto_pass' or scored['layers']['aml']['requires_review']):
+                    from .cases import create_in_db
+                    create_in_db(db,tx.transaction_id,'system')
                 history.add(tx,float(scored['sub_scores']['rules']>=self.cfg['nlp']['rule_short_circuit']))
                 result[tx.transaction_id]=scored
             return [result[t.transaction_id] for t in transactions]
@@ -111,6 +118,6 @@ class Engine:
     def metrics(self):
         with self.store.connect() as db:
             rows=[json.loads(r[0]) for r in db.execute('SELECT result_json FROM scores')]
-        names=['text','behavioral','network','fusion','total_pipeline']
-        return dict(scored_transactions=len(rows),average_latency_ms={k:sum(r['latency_ms'][k] for r in rows)/len(rows) if rows else 0. for k in names},
+        names=['text','behavioral','network','aml','fusion','total_pipeline']
+        return dict(scored_transactions=len(rows),average_latency_ms={k:sum(r['latency_ms'].get(k,0) for r in rows)/len(rows) if rows else 0. for k in names},
                     scope='Persisted unique scores; pipeline timings exclude DB I/O, HTTP and on-demand explanations. HTTP latency is separately logged.',model_version=self.version)

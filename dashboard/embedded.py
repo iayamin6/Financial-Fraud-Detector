@@ -17,7 +17,10 @@ def shared_models():
     directory = TemporaryDirectory(prefix='fraud-models-')
     cfg = load_config()
     cfg['paths']['database'] = str(Path(directory.name) / 'empty.sqlite3')
-    return Engine(cfg), directory
+    engine=Engine(cfg)
+    from fraud.rag import Knowledge
+    engine.knowledge=Knowledge(engine)
+    return engine, directory
 
 
 def session_engine():
@@ -34,6 +37,9 @@ def session_engine():
 def dispatch(engine, method, path, **kwargs):
     """Transport adapter only: the five model layers are unchanged."""
     parts = urlsplit(path)
+    from fraud.investigation_transport import dispatch_investigation
+    if parts.path.startswith(('/cases','/investigations','/monitoring')):
+        return dispatch_investigation(engine,method,path,kwargs.get('json',{}))
     try:
         if method == 'GET':
             if parts.path == '/health': return {'status': 'ready', 'model_version': engine.version}

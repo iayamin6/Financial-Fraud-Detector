@@ -4,6 +4,7 @@ paths:
   models: models
   reports: reports
   database: data/fraud.sqlite3
+  knowledge: knowledge/policies.json
 nlp:
   base_model: distilbert/distilbert-base-uncased
   embedding_model: sentence-transformers/all-MiniLM-L6-v2
@@ -25,6 +26,9 @@ nlp:
   - \bact now\b
   - \bsuspended\b
   - \bblocked\b
+  - এখনই
+  - জরুরি
+  - বন্ধ হয়ে যাবে
   rules:
   - name: credential_request
     pattern: \b(?:send|share|tell|provide|reply with|give|forward)\b.{0,45}\b(?:otp|pin|password|verification
@@ -36,6 +40,13 @@ nlp:
   - name: advance_fee
     pattern: \b(?:prize|lottery|reward|grant)\b.{0,70}\b(?:fee|deposit|pay)\b
     score: 0.8
+  - name: bangla_credential_request
+    pattern: (?:otp|pin|password|ওটিপি|পিন|পাসওয়ার্ড).{0,35}(?:দিন|পাঠান|শেয়ার করুন|বলুন|din|pathan|share
+      korun)
+    score: 0.98
+  - name: bangla_credential_request
+    pattern: (?:দিন|পাঠান|বলুন).{0,25}(?:otp|pin|ওটিপি|পিন|পাসওয়ার্ড)
+    score: 0.98
   known_scams:
   - Send your OTP immediately to prevent account suspension.
   - Your bank account is frozen. Click the link and verify your password.
@@ -92,3 +103,32 @@ api:
 explain:
   lime_samples: 128
   top_features: 8
+aml:
+  window_minutes: 60
+  velocity_count: 6
+  structuring_threshold: 10000
+  structuring_min_fraction: 0.8
+  structuring_count: 3
+  rapid_minutes: 30
+  forwarding_ratio: 0.8
+  mule_sources: 3
+  max_cycle_hops: 4
+  max_graph_edges: 200
+cases:
+  auto_create: true
+rag:
+  top_k: 3
+  min_similarity: 0.25
+  generator_enabled: true
+  generator_max_tokens: 128
+  max_question_chars: 1000
+security:
+  mode: local
+  keys_env: FRAUD_API_KEYS
+monitoring:
+  min_samples: 30
+  psi_warning: 0.2
+  recent_limit: 500
+mlops:
+  enabled: false
+  experiment: FraudShield

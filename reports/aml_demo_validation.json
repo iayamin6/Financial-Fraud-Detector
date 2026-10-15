@@ -1,0 +1,29 @@
+{
+  "Structuring": {
+    "alerts": [
+      "structuring"
+    ],
+    "scored": 3,
+    "batch_wall_ms": 93.78129198739771
+  },
+  "Rapid forwarding": {
+    "alerts": [
+      "mule_indicator",
+      "rapid_movement"
+    ],
+    "scored": 4,
+    "batch_wall_ms": 88.70620898960624
+  },
+  "Circular transfers": {
+    "alerts": [
+      "circular_transfer",
+      "rapid_movement"
+    ],
+    "scored": 3,
+    "batch_wall_ms": 157.60729199973866
+  },
+  "case_count": 4,
+  "mean_pipeline_ms": 32.87066249613417,
+  "p95_pipeline_ms": 83.99143285132588,
+  "scope": "Ten local synthetic AML demo payments, cold text routes; excludes engine initialization. Not throughput or bank latency proof."
+}

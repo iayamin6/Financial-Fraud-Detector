@@ -1,8 +1,16 @@
-# Fraud Signals
+# FraudShield: Financial Fraud Detection & Investigation
 
-An explainable financial fraud detection demo combining **fine-tuned DistilBERT, transaction history, a relationship graph, and explicit rules**. Includes all five layers, trained artifacts, reproducible experiments, FastAPI, SQLite feedback, and a Streamlit analyst dashboard.
+An explainable financial fraud detection and investigation demo combining **fine-tuned DistilBERT, transaction history, a relationship graph, and explicit rules**. Includes all five layers, trained artifacts, reproducible experiments, FastAPI, SQLite feedback, and a Streamlit analyst dashboard.
 
 **Research demo, not a bank deployment.** The supplied dataset is original synthetic data, not downloaded PaySim. Decisions are recommendations; no banking system is connected. Risk scores are not calibrated fraud probabilities. See [evaluation results](reports/EVALUATION.md) and [data provenance](data/provenance.json).
+
+## Investigation upgrade
+
+The existing models and scoring interface now feed an integrated **AML → case → LangGraph investigation → human review** workflow. New features include configurable AML indicators, typed relationship graphs, analyst assignments and audit history, local FAISS retrieval with citation-constrained FLAN-T5 evidence selection, durable workflow checkpoints, API-key roles, drift/outcome monitoring, MLflow experiment tracking, Docker and GitHub Actions.
+
+Open **Investigations → Load AML example** to start. See [the repository audit](docs/UPGRADE_AUDIT.md) for existing versus new components and [operations/setup](docs/OPERATIONS.md) for authentication, persistent deployment, RAG limitations and new endpoints. Public Streamlit remains a session-isolated synthetic demo; use the authenticated API with persistent storage for durable cases.
+
+Evaluation is reproducible with `python scripts/evaluate_upgrade.py`; results are in [upgrade_evaluation.json](reports/upgrade_evaluation.json). Existing English classifiers were retained, not retrained or represented as multilingual models. Bangla credential rules have limited scenario coverage. No MCP server, automatic regulatory reporting, or automatic retraining is implemented.
 
 ## First time? Test the app without coding
 

@@ -50,9 +50,9 @@ p{font-size:16px;line-height:1.6}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>''', unsafe_allow_html=True)
 
-PAGES = ['Try a demo', 'Check a payment', 'Recent checks', 'Upload a CSV', 'How it works']
+PAGES = ['Try a demo', 'Check a payment', 'Recent checks', 'Upload a CSV', 'Investigations', 'Model monitoring', 'How it works']
 with st.sidebar:
-    st.markdown('<div class="brand"><span>◈</span> Fraud Signals</div><div class="brand-sub">Payment safety lab</div>', unsafe_allow_html=True)
+    st.markdown('<div class="brand"><span>◈</span> FraudShield</div><div class="brand-sub">Payment safety lab</div>', unsafe_allow_html=True)
     page = st.radio('Workspace', PAGES, key='page', label_visibility='collapsed')
     st.markdown('<div class="side-note">A safe place to explore fraud detection.<br><br>All checks are recommendations. No money is moved or blocked.</div>', unsafe_allow_html=True)
     if EMBEDDED:
@@ -67,6 +67,7 @@ def request(method, path, **kwargs):
     if EMBEDDED:
         from dashboard.embedded import dispatch, session_engine
         return dispatch(session_engine(), method, path, **kwargs)
+    kwargs.setdefault('headers',{})['X-API-Key']=os.getenv('FRAUD_API_KEY','')
     response = httpx.request(method, url + path, timeout=120 if method == 'POST' else 8, **kwargs)
     if response.is_error:
         try: detail = response.json().get('detail', response.text)
@@ -322,6 +323,13 @@ elif page == 'Upload a CSV':
         st.write('Required columns: transaction_id, sender_id, recipient_id, amount, timestamp, account_age_days. Optional: text, device_id, ip_address, relationship_group, country.')
         st.write('Keep amounts positive. Use timestamps with a UTC offset. Do not include training labels or scenario columns. Limit: 250 payments / 2 MB.')
         st.write('With demo mode off, historical payments older than the last saved check are rejected. Repeating the same ID and identical details returns its saved result.')
+
+elif page in {'Investigations','Model monitoring'}:
+    from dashboard.investigations import cases_page, monitoring_page
+    try:
+        (cases_page if page=='Investigations' else monitoring_page)(request)
+    except (httpx.HTTPError, RuntimeError, ValueError) as exc:
+        error_message(exc)
 
 else:
     st.title('A simple guide to what you’re seeing.')

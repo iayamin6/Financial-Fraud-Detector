@@ -45,6 +45,8 @@ class ScoreResponse(BaseModel):
     latency_ms: dict[str,float]
     model_version: str
     scored_at: datetime
+    component_versions: dict[str,str]=Field(default_factory=dict)
+    aml_review_required: bool=False
 
 class FeedbackResponse(BaseModel):
     transaction_id: str

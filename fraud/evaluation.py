@@ -18,4 +18,6 @@ def save_report(cfg, name, report):
     path = Path(cfg['paths']['reports']) / f'{name}.json'
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, indent=2))
+    from .mlops import track
+    track(cfg,name,report)
     print(json.dumps({name: report}, indent=2), flush=True)

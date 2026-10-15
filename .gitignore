@@ -11,3 +11,8 @@ __pycache__/
 !.env.example
 .streamlit/secrets.toml
 .sites-runtime/
+mlruns/
+mlartifacts/
+models/**/.cache/
+*.sqlite
+*.sqlite-*

@@ -17,11 +17,13 @@ logger=logging.getLogger('fraud.http')
 logging.basicConfig(level=logging.INFO,format='%(asctime)s %(name)s %(levelname)s %(message)s')
 def create_app(config=None):
     cfg=config or load_config()
+    from fraud.security import policy, identify, allowed
+    mode,keys=policy(cfg)
     @asynccontextmanager
     async def lifespan(app):
         app.state.engine=Engine(cfg)
         yield
-    app=FastAPI(title='Fraud Signals',version='0.1.0',description='Local synthetic-data research demo; risk recommendations, not bank enforcement.',lifespan=lifespan)
+    app=FastAPI(title='FraudShield',version='0.2.0',description='Local synthetic-data research demo; risk recommendations, not bank enforcement.',lifespan=lifespan)
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(request,exc):
@@ -35,6 +37,19 @@ def create_app(config=None):
         response.headers['X-Process-Time-Ms']=f'{elapsed:.3f}'
         logger.info('http_latency_ms method=%s path=%s elapsed=%.3f',request.method,request.url.path,elapsed)
         return response
+
+    @app.middleware('http')
+    async def authorize(request,call_next):
+        if mode=='local':
+            request.state.identity={'actor':'local-analyst','role':'analyst'}
+        elif request.url.path=='/health':
+            return await call_next(request)
+        else:
+            identity=identify(request.headers.get('X-API-Key',''),keys)
+            if not identity: return JSONResponse(status_code=401,content={'detail':'Valid API key required'})
+            if not allowed(identity['role'],request.method,request.url.path): return JSONResponse(status_code=403,content={'detail':'Role does not permit this operation'})
+            request.state.identity=identity
+        return await call_next(request)
 
     def call(fn,*args):
         try: return fn(*args)
@@ -82,6 +97,8 @@ def create_app(config=None):
 
     @app.get('/policy',response_model=PolicyResponse)
     def policy(): return cfg['fusion']
+    from api.investigations import router
+    app.include_router(router(app,call))
     return app
 
 app=create_app()

@@ -6,6 +6,7 @@ import numpy as np
 
 
 def rule_signals(text, cfg):
+    text=unicodedata.normalize('NFKC',text)
     hits=[]
     # Suppress only a local safety advisory, never the entire message.
     clauses=re.split(r'[.!?;\n]+', text.lower())
@@ -13,7 +14,9 @@ def rule_signals(text, cfg):
         for clause in clauses:
             for match in re.finditer(rule['pattern'],clause,re.I):
                 prefix=clause[max(0,match.start()-35):match.start()]
-                if re.search(r'(?:never|do not|don\x27t|will never|must not)\s*(?:ever\s*)?$',prefix):
+                if re.search(r'(?:never|do not|don\x27t|will never|must not|কখনো|কখনও)\s*(?:ever\s*)?$',prefix):
+                    continue
+                if re.match(r'\s*(?:না|na)\b',clause[match.end():],re.I):
                     continue
                 hits.append({'name':rule['name'],'score':rule['score'],'evidence':match.group(0)})
     urgency=[p for p in cfg['nlp']['urgency_patterns'] if re.search(p,text,re.I)]
@@ -64,15 +67,16 @@ class TextLayer:
     def score(self,text):
         if not text or not text.strip():
             return dict(score=0.,rules=0.,signals=[],route='no_text',available=False,urgency=0.,entities=[],script={'scripts':[],'unusual_mix':False})
+        text=unicodedata.normalize('NFKC',text).strip()
         hits,urgency=rule_signals(text,self.cfg); rule=max([h['score'] for h in hits],default=0.)
         scripts=script_signal(text,self.cfg)
         entities=[{'text':e.text,'label':e.label_} for e in self.ner(text).ents]
         signals=[{'name':h['name'],'detail':h['evidence'],'value':h['score']} for h in hits]
         if urgency: signals.append({'name':'urgency','detail':'Pressure or urgency language detected','value':urgency})
         if scripts['unusual_mix']: signals.append({'name':'mixed_scripts','detail':', '.join(scripts['scripts']),'value':0.})
-        result=dict(rules=rule,signals=signals,urgency=urgency,entities=entities,script=scripts,available=True)
+        result=dict(confidence_note='Uncalibrated risk evidence; English classifier. Bangla coverage is limited to configured rules.',rules=rule,signals=signals,urgency=urgency,entities=entities,script=scripts,available=True)
         if rule>=self.cfg['nlp']['rule_short_circuit']:
-            return dict(**result,score=rule,route='rule_short_circuit',baseline=None,bert=None,semantic=None)
+            return dict(**result,classifier_confidence=None,score=rule,route='rule_short_circuit',baseline=None,bert=None,semantic=None)
         p=float(self.baseline.predict_proba([text])[0,1]); bert=None
         if p<=self.cfg['nlp']['prefilter_low'] or p>=self.cfg['nlp']['prefilter_high']:
             route='baseline'; model_score=p
@@ -86,4 +90,4 @@ class TextLayer:
         combined=max(rule,w['model']*model_score+w['semantic']*semantic+w['urgency']*urgency)
         signals.append({'name':'text_classifier','detail':f'{route} scam evidence','value':model_score})
         signals.append({'name':'semantic_match','detail':self.examples[idx],'value':similarity})
-        return dict(**result,score=float(combined),route=route,baseline=p,bert=bert,semantic=semantic)
+        return dict(**result,classifier_confidence={'value':max(model_score,1-model_score),'calibrated':False,'label':'scam' if model_score>=.5 else 'legitimate'},score=float(combined),route=route,baseline=p,bert=bert,semantic=semantic)

@@ -1,0 +1,3 @@
+# Synthetic investigation policy corpus
+
+These original passages were authored for this project. They are simulation guidance, not bank policy, legal advice, regulatory text, or a claim of compliance. IDs are stable citation identifiers; the application stores passage text and its SHA-256 digest with each answer. No customer documents are indexed. Local MiniLM embeddings and FAISS perform retrieval. The local FLAN-T5 generator selects supporting passage IDs; only verbatim retrieved passages are emitted as supporting guidance. If generation fails or its references are invalid, the application clearly labels an extractive fallback.

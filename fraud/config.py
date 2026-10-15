@@ -8,6 +8,8 @@ def load_config(path=None):
     cfg = yaml.safe_load(source.read_text())
     for key, value in cfg['paths'].items():
         cfg['paths'][key] = str((source.parent / value).resolve())
+    if os.getenv('FRAUD_DATABASE'):
+        cfg['paths']['database']=str(Path(os.environ['FRAUD_DATABASE']).resolve())
     w = cfg['fusion']['weights']
     if set(w) != {'text', 'behavioral', 'network', 'rules'} or any(v < 0 for v in w.values()) or abs(sum(w.values()) - 1) > 1e-8:
         raise ValueError('Fusion weights must be nonnegative and sum to one')

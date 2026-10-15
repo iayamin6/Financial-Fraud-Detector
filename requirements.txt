@@ -21,3 +21,10 @@ streamlit==1.63.0
 httpx==0.28.1
 python-multipart==0.0.32
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+
+langgraph==1.2.15
+langgraph-checkpoint-sqlite==3.1.2
+faiss-cpu==1.15.1
+sentencepiece==0.2.2
+graphviz==0.21
+pyarrow<25

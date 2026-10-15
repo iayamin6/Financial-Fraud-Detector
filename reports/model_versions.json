@@ -1,0 +1,22 @@
+{
+  "nlp": {
+    "sha256": "a29ce94d0f9dcdc8c0f5661fea6a582bf5277b2ad90bf59fa1fc3e5b0ee37818",
+    "artifact": "bert"
+  },
+  "baseline": {
+    "sha256": "b2e6bc9675ebb3d52c1181087cb129da511ccaf5df7d554901d1f1c84a81f4ad",
+    "artifact": "text_baseline.joblib"
+  },
+  "transaction_and_anomaly": {
+    "sha256": "bde6b848f0a81172c9e0fc63b9277dfff62be7c5ef18fd0d4b29f19f10475189",
+    "artifact": "behavior.joblib"
+  },
+  "embeddings": {
+    "sha256": "773558dde9007525fa33388bcbaf2987bf8b83059c885d3db936b3ba847322e9",
+    "artifact": "embeddings"
+  },
+  "generator": {
+    "sha256": "e5f228fd51579d1413a46b313bb07143f1abd0c279c4a330b4dd2940aa862729",
+    "artifact": "generator"
+  }
+}
