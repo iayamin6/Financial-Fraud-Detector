@@ -22,6 +22,15 @@ next(x for x in at.text_area if x.label=='Required rationale').set_value('Synthe
 at.button(key='FormSubmitter:'+review_form+'-Record outcome and resolve case').click().run()
 assert not at.exception,at.exception
 assert Cases(engine).get(case['case_id'])['status']=='resolved'
+# Loading another example must not keep actions bound to the previous case.
+at.button(key='aml_demo').click().run()
+assert not at.exception,at.exception
+selected=at.selectbox(key='selected_case').value
+assert selected != case['case_id']
+new_case=Cases(engine).get(selected)
+assert new_case['score']['layers']['aml']['requires_review']
+at.run()
+assert at.selectbox(key='selected_case').value == selected
 at.radio(key='page').set_value('Model monitoring').run()
 assert not at.exception,at.exception
 print('PASS: cloud case creation, graph UI, real LangGraph + local LLM, human review, audit and monitoring.')
